@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="pro-language-switcher">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+
+  <template>
+    <button on-click="_langChange">Change Language</button>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'pro-language-switcher',
+
+      _updateLangQueryStringParameter: function(value) {
+        window.I18n.lang = value;
+        window.location.href = window.location.updateQueryStringParameter(window.location.href, 'lang', value);
+      },
+
+      _langChange: function() {
+        if (window.I18n.lang === 'en' ) {
+          this._updateLangQueryStringParameter('es');
+        } else {
+          this._updateLangQueryStringParameter('en');
+        }
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,37 @@
+<dom-module id='pro-grid-element'>
+  <template>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }
+
+      .hoverable{
+        height: 325px;
+        width: 100%;
+        margin: 15px;
+        margin-bottom: 35px;
+        background-color: white;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1)
+      }
+
+      .hoverable:hover{
+        transform: translate(0, -8px);
+        box-shadow: 0 40px 40px rgba(0,0,0,.16)
+      }
+    </style>
+
+    <div class="hoverable">
+      <img src="" alt="">
+      <h5>lorem</h5>
+      <h6>ipsum dolor sit amet</h6>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'pro-grid-element'
+    });
+  </script>
+</dom-module>

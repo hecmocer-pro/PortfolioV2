@@ -1,0 +1,27 @@
+<link rel='import' href='./pro-i18n-behaviour.html'>
+
+<dom-module id='pro-i18ned-component'>
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h3>text to translate:</h3>
+    <h3>{{t('lorem')}}</h3>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'pro-i18ned-component',
+
+      behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+      created: function() {
+        this.appendLocale('es', 'lorem', 'TRADUCIDO');
+        this.appendLocale('en', 'lorem', 'TRANSLATED');
+      }
+    });
+  </script>
+</dom-module>

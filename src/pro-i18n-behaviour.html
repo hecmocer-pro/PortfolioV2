@@ -1,0 +1,19 @@
+<script>
+  window.MyBehaviours = window.MyBehaviours || {};
+
+  MyBehaviours.proI18nBehaviour = {
+
+      t: function(key) {
+        if (window.I18n.locales[window.I18n.lang]) {
+          return window.I18n.locales[window.I18n.lang][key] || 'No translation available';
+        } else {
+          return window.I18n.locales['en'][key] || 'No translation available';
+        }
+      },
+
+      appendLocale: function(lang, key, value) {
+        window.I18n.locales[lang] = window.I18n.locales[lang] || {};
+        window.I18n.locales[lang][key] = value;
+      }
+    };
+</script>
