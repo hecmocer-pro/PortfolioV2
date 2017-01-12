@@ -13,9 +13,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="my-app">
   <style>
   .fullViewportHeight{
-    min-height: 60vh;
-    margin: 20vh 0 0 0;
-    padding: 0;
+    min-height: 80vh;
+    padding: 10vh 0;
+  }
+  .v1{
+    background-color: #99D8D8;
+  }
+  .v2{
+    background-color: #8178A8;
+  }
+  .v3{
+    background-color: #FCC3A5;
+  }
+  .v4{
+    background-color: #66C5CC;
+  }
+  .v5{
+    background-color: #6D4C9B;
   }
   </style>
   <template>
@@ -24,9 +38,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <app-drawer swipe-open opened align="right">
     </app-drawer>
 
-    <my-view1 class="fullViewportHeight"></my-view1>
-    <my-view2 class="fullViewportHeight"></my-view2>
-    <my-view3 class="fullViewportHeight"></my-view3>
+    <my-view1 class="fullViewportHeight v1"></my-view1>
+    <my-view2 class="fullViewportHeight v2"></my-view2>
+    <my-view2 class="fullViewportHeight v3"></my-view2>
+    <my-view2 class="fullViewportHeight v4"></my-view2>
+    <my-view3 class="fullViewportHeight v5"></my-view3>
     <my-view404 class="fullViewportHeight"></my-view404>
   </template>
 
