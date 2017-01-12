@@ -13,15 +13,19 @@
 
   </template>
   <script>
-    Polymer({
-      is: 'pro-i18ned-component',
+    (function() {
+      'use strict';
 
-      behaviors: [window.MyBehaviours.proI18nBehaviour],
+      Polymer({
+        is: 'pro-i18ned-component',
 
-      created: function() {
-        this.appendLocale('es', 'lorem', 'TRADUCIDO');
-        this.appendLocale('en', 'lorem', 'TRANSLATED');
-      }
-    });
+        behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+        created: function() {
+          this.appendLocale('es', 'lorem', 'TRADUCIDO');
+          this.appendLocale('en', 'lorem', 'TRANSLATED');
+        }
+      });
+    })();
   </script>
 </dom-module>
