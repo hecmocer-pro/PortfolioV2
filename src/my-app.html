@@ -11,16 +11,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="components-import.html">
 
 <dom-module id="my-app">
+  <style>
+  .fullViewportHeight{
+    min-height: 60vh;
+    margin: 20vh 0 0 0;
+    padding: 0;
+  }
+  </style>
   <template>
 
     <!-- Where header should be -->
     <app-drawer swipe-open opened align="right">
     </app-drawer>
 
-    <my-view1></my-view1>
-    <my-view2></my-view2>
-    <my-view3></my-view3>
-    <my-view404></my-view404>
+    <my-view1 class="fullViewportHeight"></my-view1>
+    <my-view2 class="fullViewportHeight"></my-view2>
+    <my-view3 class="fullViewportHeight"></my-view3>
+    <my-view404 class="fullViewportHeight"></my-view404>
   </template>
 
   <script>
