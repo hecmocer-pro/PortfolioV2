@@ -30,20 +30,57 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     screenSize = {{screenSize}}
 
-    <iron-grid current-screenformat="{{screenSize}}">
+    <iron-scroll-threshold
+    id="ist"
+    on-lower-threshold="asdf"
+    lower-threshold="1"
+    scroll-target="ironGridTarget">
+    <iron-grid id="ironGridTarget" current-screenformat="{{screenSize}}">
 
         <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+        <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
+                <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
         <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
         <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
         <pro-grid-element class="xs12 s6 m3"></pro-grid-element>
 
     </iron-grid>
+    </iron-scroll-threshold>
 
   </template>
 
   <script>
     Polymer({
-      is: 'my-view2'
+      is: 'my-view2',
+
+      asdf: function() {
+        debugger;
+        console.log('End of view 2 reached');
+
+        this.$.ist.clearTriggers();
+      }
     });
   </script>
 </dom-module>
