@@ -6,15 +6,22 @@
     <style include="shared-styles">
       :host {
         display: block;
-        margin-left: -405px;
+      }
+      .videoCenter{
         overflow: hidden;
+        margin-top: calc(100vh - 1080px);
+        margin-left: calc(100% - 1920px);
       }
     </style>
 
-    <video height="100%" autoplay loop>
-      <source src="../src/343378693.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
+
+    <template is="dom-if" if="{{queryMatches}}">
+      <video class="videoCenter" autoplay loop>
+        <source src="../src/343378693.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </template>
 
   </template>
 
@@ -23,7 +30,25 @@
       'use strict';
 
       Polymer({
-        is: 'pro-welcome'
+        is: 'pro-welcome',
+
+        attached: function() {
+          this.set('noBackground', true);
+          let self = this;
+
+          if (!this.queryMatches) {
+            this.setBackground();
+          }
+
+          window.onresize = function(ev) {
+            window.innerWidth < 600 && self.noBackground && self.setBackground();
+          }
+        },
+
+        setBackground: function() {
+          this.set('noBackground', false);
+          document.body.style.background = "url('../src/kitsune.jpg') no-repeat";
+        }
       });
     })();
   </script>
