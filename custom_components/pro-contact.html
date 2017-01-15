@@ -1,6 +1,8 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='pro-i18ned-component.html'>
+<link rel='import' href='./pro-section-header.html'>
+
 
 <dom-module id="pro-contact">
   <template>
@@ -11,10 +13,7 @@
       }
     </style>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <pro-i18ned-component></pro-i18ned-component>
-    <pro-language-switcher></pro-language-switcher>
+    <pro-section-header text="{{t('pro-contact-header')}}"></pro-section-header>
   </template>
 
   <script>
@@ -22,7 +21,14 @@
       'use strict';
 
       Polymer({
-        is: 'pro-contact'
+        is: 'pro-contact',
+
+        behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+        created: function() {
+          this.appendLocale('es', 'pro-contact-header', 'Contacto');
+          this.appendLocale('en', 'pro-contact-header', 'Contact');
+        }
       });
     })();
   </script>
