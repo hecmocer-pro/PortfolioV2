@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
+<link rel='import' href='./pro-i18n-behaviour.html'>
 
 <dom-module id="pro-profile">
   <template>
@@ -63,10 +64,9 @@
     <div class="text">
       <h2 class="textHeader">Héctor Moreno Cervera</h2>
       <!--DETALLES EN NEGRITA-->
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>{{t('lorem')}}</p>
     </div>
 
-    </div>
   </template>
 
   <script>
@@ -74,7 +74,14 @@
       'use strict';
 
       Polymer({
-        is: 'pro-profile'
+        is: 'pro-profile',
+
+        behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+        created: function() {
+          this.appendLocale('es', 'lorem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+          this.appendLocale('en', 'lorem', 'TRANSLATED Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        }
       });
     })();
   </script>
