@@ -18,7 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .fullVh{
     height: 100vh;
   }
-  .v1{
+  .sections :nth-child(odd){
     background-color: #dddddd;
     /*background-color: #99D8D8;*/
     /*background-color: #8178A8;*/
@@ -35,8 +35,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <app-drawer swipe-open align="right" class="appDrawer">
     </app-drawer>
 
-    <pro-welcome class="fullVh"></pro-welcome>
-    <pro-profile class="fullVhPlusPadding v1"></pro-profile>
+    <div class="sections">
+      <pro-welcome class="fullVh"></pro-welcome>
+      <pro-profile class="fullVhPlusPadding"></pro-profile>
+    </div>
     <!--<pro-experience class="fullVhPlusPadding"></pro-experience>-->
     <!--<pro-journeys class="fullVhPlusPadding v1"></pro-journeys>-->
     <!--<pro-contact class="fullVhPlusPadding"></pro-contact>-->
