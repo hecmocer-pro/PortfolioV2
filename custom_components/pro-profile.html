@@ -1,20 +1,72 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
-<link rel='import' href='pro-i18ned-component.html'>
 
 <dom-module id="pro-profile">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 10px;
+      }
+      .img{
+        display: block;
+        border-radius: 50%;
+        border: solid 10px #eeeeee;
+        height: auto;
+        margin: 0 auto;
+        width: 75%;
+      }
+      .textHeader{
+        text-align: center;
+      }
+      .text {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      @media (min-width: 600px) {
+        .img {
+          width: 40%;
+          float: left;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .text {
+          min-height: 350px;
+        }
+      }
+
+      @media (min-width: 950px) {
+        .img {
+          width: 400px;
+          margin-left: 10%;
+        }
+        .text {
+          min-height: 400px;
+          margin-right: 10%;
+        }
+      }
+
+      @media (min-width: 1300px) {
+        .img {
+          margin-left: 20%;
+          width: 20%;
+          width: 40vh;
+        }
+        .text {
+          margin-left: 20%;
+          margin-right: 20%;
+        }
       }
     </style>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="../src/kitsune.jpg" alt="profile picture" class="img">
+    <div class="text">
+      <h2 class="textHeader">Héctor Moreno Cervera</h2>
+      <!--DETALLES EN NEGRITA-->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
 
-    <pro-i18ned-component></pro-i18ned-component>
-    <pro-language-switcher></pro-language-switcher>
+    </div>
   </template>
 
   <script>
