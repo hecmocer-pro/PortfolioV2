@@ -1,4 +1,4 @@
-<dom-module id='pro-grid-element'>
+<dom-module id='pro-journey'>
   <template>
     <style>
       :host {
@@ -20,12 +20,17 @@
         transform: translate(0, -8px);
         box-shadow: 0 40px 40px rgba(0,0,0,.16)
       }
+
+      .img{
+        width: auto;
+        height: auto;
+        max-height: 80%;
+      }
     </style>
 
     <div class="hoverable">
-      <img src="" alt="">
-      <h5>lorem</h5>
-      <h6>ipsum dolor sit amet</h6>
+      <img src="{{imageUrl}}" alt="" class="img">
+      <p>{{text}}</p>
     </div>
 
   </template>
@@ -34,7 +39,17 @@
       'use strict';
 
       Polymer({
-        is: 'pro-grid-element'
+        is: 'pro-journey',
+
+        properties: {
+          imageUrl: {
+            type: String
+          },
+
+          text: {
+            type: String
+          }
+        }
       });
     })();
   </script>
