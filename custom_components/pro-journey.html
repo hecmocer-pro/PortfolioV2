@@ -1,3 +1,5 @@
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+
 <dom-module id='pro-journey'>
   <template>
     <style>
@@ -26,12 +28,27 @@
         height: auto;
         max-height: 80%;
       }
+
+      .dialog{
+        margin: 0;
+        max-width: 90%;
+        overflow: hidden;
+      }
+
+      .dialogImage{
+        max-height: 90vh;
+        width: 100%;
+      }
     </style>
 
-    <div class="hoverable">
+    <div class="hoverable" on-click="openDialog">
       <img src="{{imageUrl}}" alt="" class="img">
       <p>{{text}}</p>
     </div>
+
+    <paper-dialog id="dialog" class="dialog">
+      <img src="{{imageUrl}}" alt="" class="dialogImage" style="padding: 0; margin: 0;">
+    </paper-dialog>
 
   </template>
   <script>
@@ -49,6 +66,10 @@
           text: {
             type: String
           }
+        },
+
+        openDialog: function() {
+          this.$.dialog.open();
         }
       });
     })();
