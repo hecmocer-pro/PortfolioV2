@@ -1,0 +1,79 @@
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+
+<dom-module id='pro-journey'>
+  <template>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }
+
+      .wrapper{
+        height: 100%;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: transparent;
+      }
+
+      .hoverable{
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
+        overflow: hidden;
+      }
+
+      .hoverable:hover{
+        transform: translate(0, -8px);
+        box-shadow: 0 40px 40px rgba(0,0,0,.16);
+      }
+
+      .img{
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      .dialog{
+        margin: 0;
+        max-width: 90%;
+        overflow: hidden;
+      }
+
+      .dialogImage{
+        max-height: 90vh;
+        max-width: 100%;
+      }
+    </style>
+
+    <div class="wrapper">
+      <img src="{{imageUrl}}" alt="" class="hoverable img" on-click="openDialog">
+    </div>
+
+    <paper-dialog id="dialog" class="dialog">
+      <img src="{{imageUrl}}" alt="" class="dialogImage" style="padding: 0; margin: 0;">
+    </paper-dialog>
+
+  </template>
+  <script>
+     (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-journey',
+
+        properties: {
+          imageUrl: {
+            type: String
+          },
+
+          text: {
+            type: String
+          }
+        },
+
+        openDialog: function() {
+          this.$.dialog.open();
+        }
+      });
+    })();
+  </script>
+</dom-module>

@@ -2,18 +2,76 @@
 <link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='pro-i18ned-component.html'>
 <link rel='import' href='./pro-section-header.html'>
-
+<link rel='import' href='./pro-journey.html'>
 
 <dom-module id="pro-journeys">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 10px;
+      }
+      .container{
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
       }
     </style>
 
     <pro-section-header text="{{t('pro-journeys-header')}}"></pro-section-header>
+
+    <iron-grid current-screenformat="{{screenSize}}" class="container">
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+        <pro-journey
+          image-url="../src/kitsune.jpg"
+          text="{{t('pro-journeys-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-journey>
+
+
+    </iron-grid>
+
   </template>
 
   <script>
@@ -28,6 +86,9 @@
         created: function() {
           this.appendLocale('es', 'pro-journeys-header', 'Viajes');
           this.appendLocale('en', 'pro-journeys-header', 'Journeys');
+
+          this.appendLocale('es', 'pro-journeys-textn', 'lorem ipsum dolor sit amet ESP');
+          this.appendLocale('en', 'pro-journeys-textn', 'lorem ipsum dolor sit amet ENG');
         }
       });
     })();
