@@ -8,25 +8,28 @@
         width: 100%;
       }
 
+      .wrapper{
+        height: 100%;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: transparent;
+      }
+
       .hoverable{
-        height: 325px;
-        width: 100%;
-        margin: 15px;
-        margin-bottom: 35px;
-        background-color: white;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
-        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1)
+        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
+        overflow: hidden;
       }
 
       .hoverable:hover{
         transform: translate(0, -8px);
-        box-shadow: 0 40px 40px rgba(0,0,0,.16)
+        box-shadow: 0 40px 40px rgba(0,0,0,.16);
       }
 
       .img{
-        width: auto;
-        height: auto;
-        max-height: 80%;
+        max-height: 100%;
+        max-width: 100%;
       }
 
       .dialog{
@@ -41,9 +44,8 @@
       }
     </style>
 
-    <div class="hoverable" on-click="openDialog">
-      <img src="{{imageUrl}}" alt="" class="img">
-      <p>{{text}}</p>
+    <div class="wrapper">
+      <img src="{{imageUrl}}" alt="" class="hoverable img" on-click="openDialog">
     </div>
 
     <paper-dialog id="dialog" class="dialog">
