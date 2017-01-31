@@ -2,6 +2,11 @@
 <link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='pro-i18ned-component.html'>
 <link rel='import' href='./pro-section-header.html'>
+<link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/paper-menu/paper-submenu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 
 
 <dom-module id="pro-experience">
@@ -11,9 +16,70 @@
         display: block;
         padding: 10px;
       }
+
+      .paperMenu{
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: transparent
+      }
+
+      .menu{
+        background-color: transparent
+      }
+
+      h2{
+        margin: 0;
+      }
+
+      .subMenuTrigger{
+        margin-top: 10px;
+      }
+
+      .openedMenu{
+        transform: rotate(180deg);
+      }
     </style>
 
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
+
+    <paper-menu multi class="paperMenu">
+      <paper-submenu>
+        <div class="menu-trigger subMenuTrigger">
+          <h2>
+            Studies
+            <iron-icon icon="expand-more" class="openedMenu"></iron-icon>
+          </h2>
+        </div>
+        <paper-menu class="menu-content menu">
+          <paper-item>topic1</paper-item>
+          <paper-item>topic2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+      <paper-submenu>
+        <div class="menu-trigger subMenuTrigger">
+          <h2>
+            Jobs
+            <iron-icon icon="expand-more"></iron-icon>
+          </h2>
+        </div>
+        <paper-menu class="menu-content menu">
+          <paper-item>topic1</paper-item>
+          <paper-item>topic2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+      <paper-submenu>
+        <div class="menu-trigger subMenuTrigger">
+          <h2>
+            Technologies
+            <iron-icon icon="expand-more"></iron-icon>
+          </h2>
+        </div>
+        <paper-menu class="menu-content menu">
+          <paper-item>topic1</paper-item>
+          <paper-item>topic2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+    </paper-menu>
   </template>
 
   <script>
@@ -28,6 +94,14 @@
         created: function() {
           this.appendLocale('es', 'pro-experience-header', 'Experiencia');
           this.appendLocale('en', 'pro-experience-header', 'Experience');
+        },
+
+        listeners: {
+          'opened-changed': 'subMenuClicked'
+        },
+
+        subMenuClicked: function(e) {
+          console.log('asdasdasdads', e);
         }
       });
     })();
