@@ -22,12 +22,12 @@
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
 
     <template is="dom-if" if="{{!queryMatches}}">
-      <img class="imageCenter" src="../src/kitsune.jpg" alt="">
+      <img class="imageCenter" src="../images/kitsune.jpg" alt="">
     </template>
 
     <template is="dom-if" if="{{queryMatches}}">
       <video class="videoCenter" autoplay loop>
-        <source src="../src/343378693.mp4" type="video/mp4">
+        <source src="../images/343378693.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </template>
