@@ -7,6 +7,7 @@
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../custom_components/pro-experience-submenu.html">
 
 
 <dom-module id="pro-experience">
@@ -43,42 +44,24 @@
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
 
     <paper-menu multi class="paperMenu">
-      <paper-submenu>
-        <div class="menu-trigger subMenuTrigger">
-          <h2>
-            Studies
-            <iron-icon icon="expand-more" class="openedMenu"></iron-icon>
-          </h2>
-        </div>
-        <paper-menu class="menu-content menu">
+      <pro-experience-submenu class="submenu" header-text="Studies">
+        <paper-menu class="menu-content menu" multi>
           <paper-item>topic1</paper-item>
           <paper-item>topic2</paper-item>
         </paper-menu>
-      </paper-submenu>
-      <paper-submenu>
-        <div class="menu-trigger subMenuTrigger">
-          <h2>
-            Jobs
-            <iron-icon icon="expand-more"></iron-icon>
-          </h2>
-        </div>
-        <paper-menu class="menu-content menu">
+      </pro-experience-submenu>
+      <pro-experience-submenu header-text="Jobs">
+        <paper-menu class="menu-content menu" multi>
           <paper-item>topic1</paper-item>
           <paper-item>topic2</paper-item>
         </paper-menu>
-      </paper-submenu>
-      <paper-submenu>
-        <div class="menu-trigger subMenuTrigger">
-          <h2>
-            Technologies
-            <iron-icon icon="expand-more"></iron-icon>
-          </h2>
-        </div>
-        <paper-menu class="menu-content menu">
+      </pro-experience-submenu>
+      <pro-experience-submenu header-text="Technologies">
+        <paper-menu class="menu-content menu" multi>
           <paper-item>topic1</paper-item>
           <paper-item>topic2</paper-item>
         </paper-menu>
-      </paper-submenu>
+      </pro-experience-submenu>
     </paper-menu>
   </template>
 
@@ -95,14 +78,6 @@
           this.appendLocale('es', 'pro-experience-header', 'Experiencia');
           this.appendLocale('en', 'pro-experience-header', 'Experience');
         },
-
-        listeners: {
-          'opened-changed': 'subMenuClicked'
-        },
-
-        subMenuClicked: function(e) {
-          console.log('asdasdasdads', e);
-        }
       });
     })();
   </script>

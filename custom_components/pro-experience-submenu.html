@@ -1,0 +1,64 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../src/shared-styles.html">
+<link rel="import" href="../bower_components/paper-menu/paper-submenu.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+
+<dom-module id="pro-experience-submenu">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      h2{
+        margin: 0;
+      }
+
+      .subMenuTrigger{
+        margin-top: 10px;
+      }
+
+      .openedMenu{
+        transform: rotate(180deg);
+      }
+
+      .transitionTransform{
+        transition: transform 250ms;
+      }
+    </style>
+
+    <paper-submenu>
+      <div class="menu-trigger subMenuTrigger">
+        <h2>
+          [[headerText]]
+          <iron-icon id="rotatableIronIcon" icon="expand-more" class="transitionTransform"></iron-icon>
+        </h2>
+      </div>
+      <content></content>
+    </paper-submenu>
+  </template>
+
+  <script>
+   (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-experience-submenu',
+
+        properties: {
+          headerText: String
+        },
+
+        listeners: {
+          'opened-changed': 'subMenuClicked'
+        },
+
+        subMenuClicked: function(e, detail){
+          this.toggleClass('openedMenu', detail.value, this.$.rotatableIronIcon);
+        }
+      });
+    })();
+  </script>
+</dom-module>
