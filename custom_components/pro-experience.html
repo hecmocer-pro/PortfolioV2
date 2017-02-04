@@ -43,27 +43,67 @@
       *:focus{
         position: inherit !important;
       }
+
+      .section{
+        border-left: solid black 1px;
+        padding: 10px 0 10px 20px;
+      }
     </style>
 
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
 
     <paper-menu multi class="paperMenu">
-      <pro-experience-submenu class="submenu" header-text="Studies">
+      <pro-experience-submenu class="submenu" header-text="Education">
         <paper-menu class="menu-content menu" multi>
-          <paper-item>topic1</paper-item>
-          <paper-item>topic2</paper-item>
+          <paper-item>
+            <div class="section">
+              Universidad Politécnica de Madrid
+              <br>
+              Mathematics and Computer Science
+              <br>
+              GPA 7.83
+              <br>
+              2012 - 2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              Roskilde University (Erasmus)
+              <br>
+              Computer Science
+              <br>
+              Autumn 2015
+            </div>
+          </paper-item>
         </paper-menu>
       </pro-experience-submenu>
       <pro-experience-submenu header-text="Jobs">
         <paper-menu class="menu-content menu" multi>
-          <paper-item>topic1</paper-item>
-          <paper-item>topic2</paper-item>
+          <paper-item>
+            <div class="section">
+              BABEL
+              <br>
+              Web Developer (AngularJS)
+              <br>
+              02/2016 - 07/2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              BBVA w/ BABEL
+              <br>
+              Web Developer (Polymer)
+              <br>
+              07/2016 - Currently
+            </div>
+          </paper-item>
         </paper-menu>
       </pro-experience-submenu>
       <pro-experience-submenu header-text="Technologies">
         <paper-menu class="menu-content menu" multi>
-          <paper-item>topic1</paper-item>
-          <paper-item>topic2</paper-item>
+          <div style="overflow: scroll">
+            LoremipsumdolorsitametconsecteturadipiscingelitsedeiusmodtemporinciduntutlaboreetdoloremagnaaliquaUtenimadminimveniamquisnostrudexercitationullamcolaborisnisiutaliquidexeacommodiconsequatQuisauteiurereprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariaturExcepteursintobcaecatcditatnonproidentsuntinculpaquiofficiadeseruntmollitanimidestlaborum.
+          </div>
         </paper-menu>
       </pro-experience-submenu>
     </paper-menu>
