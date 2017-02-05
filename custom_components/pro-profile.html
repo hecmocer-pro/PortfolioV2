@@ -59,15 +59,31 @@
           min-height: 40vh;
         }
       }
+
+      .dialog{
+        margin: 0;
+        max-width: 90%;
+        overflow: hidden;
+        box-shadow: none;
+        background-color: transparent;
+      }
+
+      .dialogImage{
+        max-height: 90vh;
+        max-width: 100%;
+      }
     </style>
 
     <pro-section-header text="{{t('pro-profile-header')}}"></pro-section-header>
-    <img src="../images/kitsune.jpg" alt="profile picture" class="img">
+    <img src="../images/kitsune.jpg" alt="profile picture" class="img" on-click="openDialog">
     <div class="text">
       <h2 class="textHeader">Héctor Moreno Cervera</h2>
       <!--DETALLES EN NEGRITA-->
       <p>{{t('pro-profile-about-me')}}</p>
     </div>
+    <paper-dialog id="dialog" class="dialog" with-backdrop>
+      <img src="../images/kitsune.jpg" alt="" class="dialogImage" style="padding: 0; margin: 0;">
+    </paper-dialog>
 
   </template>
 
@@ -86,6 +102,10 @@
 
           this.appendLocale('es', 'pro-profile-header', 'Perfil');
           this.appendLocale('en', 'pro-profile-header', 'About me');
+        },
+
+        openDialog: function() {
+          this.$.dialog.open();
         }
       });
     })();
