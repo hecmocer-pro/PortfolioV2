@@ -37,7 +37,8 @@
         margin: 0;
         max-width: 90%;
         overflow: hidden;
-        height: calc(100% - 26%);
+        box-shadow: none;
+        background-color: transparent;
       }
 
       .dialogImage{
@@ -50,7 +51,7 @@
       <img src="{{imageUrl}}" alt="" class="hoverable img" on-click="openDialog">
     </div>
 
-    <paper-dialog id="dialog" class="dialog">
+    <paper-dialog id="dialog" class="dialog" with-backdrop>
       <img src="{{imageUrl}}" alt="" class="dialogImage" style="padding: 0; margin: 0;">
     </paper-dialog>
 
