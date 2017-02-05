@@ -9,8 +9,8 @@
         overflow: hidden;
       }
       .videoCenter{
-        margin-top: calc(100vh - 1080px);
-        margin-left: calc(100% - 1920px);
+        margin-top: calc(50vh - 540px);
+        margin-left: calc(40% - 768px);
       }
       .imageCenter{
         height: 100vh;
@@ -26,8 +26,8 @@
     </template>
 
     <template is="dom-if" if="{{queryMatches}}">
-      <video class="videoCenter" autoplay loop>
-        <source src="../src/343378693.mp4" type="video/mp4">
+      <video class="videoCenter" autoplay loop muted>
+        <source src="{{imageUrl}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </template>
@@ -39,7 +39,11 @@
       'use strict';
 
       Polymer({
-        is: 'pro-welcome'
+        is: 'pro-welcome',
+
+        properties: {
+          imageUrl: String
+        }
       });
     })();
   </script>
