@@ -1,0 +1,69 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../src/shared-styles.html">
+
+<dom-module id="pro-hoverable-item">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      .hovered{
+        transform: scaleX(-1);
+      }
+
+      .icon.transition{
+        transition: transform 500ms;
+      }
+
+      .icon{
+        margin-right: 5px;
+      }
+
+      .anchor{
+        color: #1a0dab;
+      }
+
+      .anchor:hover{
+        cursor: pointer;
+      }
+
+      .anchor:visited{
+        color: #1a0dab;
+      }
+    </style>
+
+    <div class="icon item" on-mouseover='mouseover' on-mouseout='mouseout'>
+      <iron-icon id="icon" class="icon transition" icon="{{icon}}"></iron-icon>
+      <a href="{{url}}" target="_blank" class="anchor">{{text}}</a>
+    </div>
+
+  </template>
+
+  <script>
+   (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-hoverable-item',
+
+        properties: {
+          hovered: Boolean,
+          text: String,
+          icon: String,
+          url: String
+        },
+
+        mouseover: function(){
+          this.set('hovered', true);
+          this.$.icon.toggleClass('hovered', this.hovered);
+        },
+
+        mouseout: function(){
+          this.set('hovered', false);
+          this.$.icon.toggleClass('hovered', this.hovered);
+        }
+      });
+    })();
+  </script>
+</dom-module>
