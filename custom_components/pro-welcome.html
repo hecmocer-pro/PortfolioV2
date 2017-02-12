@@ -1,11 +1,12 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner-lite.html">
 
 <dom-module id="pro-welcome">
   <template>
     <style include="shared-styles">
       :host {
-        display: block;
+        display: flex;
         overflow: hidden;
       }
       .videoCenter{
@@ -17,15 +18,28 @@
         margin-left: calc(50% - 50vh);
         /* 985 / 2 = 492 */
       }
+
+      .spinner-container{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+      }
+
     </style>
 
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
 
     <template is="dom-if" if="{{!queryMatches}}">
       <img class="imageCenter" src="https://firebasestorage.googleapis.com/v0/b/hecmocer-pro.appspot.com/o/media%2FProfile.jpg?alt=media&token=7d409106-6515-4131-9ea9-822bc1888d6a" alt="">
+      <div class="spinner-container">
+        <paper-spinner-lite active></paper-spinner-lite>
+      </div>
     </template>
 
     <template is="dom-if" if="{{queryMatches}}">
+      <div class="spinner-container">
+        <paper-spinner-lite active></paper-spinner-lite>
+      </div>
       <video class="videoCenter" autoplay loop muted>
         <source src="{{imageUrl}}" type="video/mp4">
         Your browser does not support the video tag.

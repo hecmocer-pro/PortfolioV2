@@ -72,10 +72,19 @@
         max-height: 90vh;
         max-width: 100%;
       }
+
+      .spinner-container{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+      }
     </style>
 
     <pro-section-header text="{{t('pro-profile-header')}}"></pro-section-header>
     <img src="https://firebasestorage.googleapis.com/v0/b/hecmocer-pro.appspot.com/o/media%2FsmSquare.png?alt=media&token=5575575e-1b79-4e1d-87ad-f78142a19d7a"
+      <div class="spinner-container">
+        <paper-spinner-lite active></paper-spinner-lite>
+      </div>
     alt="profile picture"
     class="img"
     on-click="openDialog">
@@ -90,6 +99,9 @@
       alt=""
       class="dialogImage"
       style="padding: 0; margin: 0;">
+      <div class="spinner-container">
+        <paper-spinner-lite active></paper-spinner-lite>
+      </div>
     </paper-dialog>
 
   </template>
