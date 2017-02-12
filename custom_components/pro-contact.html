@@ -33,19 +33,26 @@
         transition: transform 250ms;
       }
 
-      .item:last-child{
+      .item{
         margin-top: 20px;
+      }
+
+      .item:first-child{
+        margin-top: 0;
       }
     </style>
 
     <pro-section-header text="{{t('pro-contact-header')}}"></pro-section-header>
 
     <div class="container">
-      <div class="item" on-mousehover="">
+      <div class="item">
         <pro-hoverable-item icon="vaadin-icons:paperplane" text="hecmocer-pro@gmail.com" url="mailto:hecmocer-pro@gmail.com"></pro-hoverable-item>
       </div>
-      <div class="item" on-hover="">
+      <div class="item">
         <pro-hoverable-item icon="vaadin-icons:twitter" text="@hecmocerPro" url="https://twitter.com/HecmocerPro"></pro-hoverable-item>
+      </div>
+      <div class="item">
+        <pro-hoverable-item icon="vaadin-icons:edit" text="Feedback" url="https://twitter.com/HecmocerPro"></pro-hoverable-item>
       </div>
     </div>
 
