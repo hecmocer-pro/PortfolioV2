@@ -62,6 +62,23 @@
         overflow-x: scroll;
         height: 30px;
       }
+
+      @keyframes example {
+          0%   {left: 0px;}
+          30%  {left: 10px;}
+          100% {left: 0px;}
+      }
+
+      /* The element to apply the animation to */
+      .animatedChevron {
+        top: 3px;
+        transform: rotate(10deg);
+        animation-name: example;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
     </style>
 
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
@@ -184,6 +201,10 @@
       </pro-experience-submenu>
       <pro-experience-submenu header-text="Technologies">
         <paper-menu class="menu-content menu techMenu" multi>
+          <paper-item style="display: inline; padding: 0">
+            <iron-icon class="ironIcon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="ironIcon" icon="icons:chevron-right"></iron-icon>
+          </paper-item>
           <paper-item style="display: inline">
             Java
           </paper-item>
@@ -228,6 +249,10 @@
           </paper-item>
         </paper-menu>
         <paper-menu class="menu-content menu techMenu" multi>
+          <paper-item style="display: inline; padding: 0">
+            <iron-icon class="ironIcon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="ironIcon" icon="icons:chevron-right"></iron-icon>
+          </paper-item>
           <paper-item style="display: inline">
             HTML5
           </paper-item>
