@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
-<link rel='import' href='pro-i18ned-component.html'>
+<link rel='import' href='./pro-i18n-behaviour.html'>
 <link rel='import' href='./pro-section-header.html'>
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/vaadin-icons/vaadin-icons.html">
@@ -52,7 +52,7 @@
         <pro-hoverable-item icon="vaadin-icons:twitter" text="@hecmocerPro" url="https://twitter.com/HecmocerPro"></pro-hoverable-item>
       </div>
       <div class="item">
-        <pro-hoverable-item icon="vaadin-icons:edit" text="Feedback" url="https://twitter.com/HecmocerPro"></pro-hoverable-item>
+        <pro-hoverable-item icon="vaadin-icons:edit" text="Feedback" url="{{t('pro-contact-feedback')}}"></pro-hoverable-item>
       </div>
     </div>
 
@@ -69,8 +69,11 @@
         behaviors: [window.MyBehaviours.proI18nBehaviour],
 
         created: function() {
-          this.appendLocale('es', 'pro-contact-header', 'Contacto');
-          this.appendLocale('en', 'pro-contact-header', 'Contact');
+          this.appendLocale('es', 'pro-profile-header', 'Perfil');
+          this.appendLocale('en', 'pro-profile-header', 'About me');
+
+          this.appendLocale('es', 'pro-contact-feedback', 'https://drive.google.com/open?id=1IqwXCu9Tz6h5NDAJUoorKMQKKSU56rAP_z7C23vhBwU');
+          this.appendLocale('en', 'pro-contact-feedback', 'https://drive.google.com/open?id=1J0aTKh2dJnH31FBNNfXz1X1ZfoARmodfXGFDqpteDAE');
         }
       });
     })();
