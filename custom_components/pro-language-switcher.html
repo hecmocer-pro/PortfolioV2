@@ -65,10 +65,10 @@
       },
 
       listeners: {
-        'selected-item-label-changed': 'langChanged'
+        'selected-item-label-changed': '_langChanged'
       },
 
-      langChanged: function(newLangEvent){
+      _langChanged: function(newLangEvent){
         var newLang = newLangEvent.detail.value;
         if(newLang === 'Spanish (ES)'){
           this._langChange('es');
