@@ -1,10 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='pro-i18ned-component.html'>
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../custom_components/pro-language-switcher.html">
 
 <dom-module id="pro-footer">
   <template>
@@ -21,12 +18,7 @@
     </style>
 
     <div>
-      <paper-dropdown-menu label="Language" vertical-align="bottom" horizontal-align="left">
-        <paper-listbox class="dropdown-content" selected="1">
-          <paper-item>Spanish (ES)</paper-item>
-          <paper-item>English (EN)</paper-item>
-        </paper-listbox>
-      </paper-dropdown-menu>
+      <pro-language-switcher></pro-language-switcher>
       <div class="floatRight">
         <div>
           HecmocerPro

@@ -1,12 +1,33 @@
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+
 <dom-module id="pro-language-switcher">
   <style>
     :host {
-      display: block;
+      display: inline;
     }
   </style>
 
+  <style is="custom-style">
+  paper-dropdown-menu {
+    --paper-input-container-label: {
+      font-style: italic;
+    };
+
+    --paper-input-container-input: {
+      color: #eeeeee;
+    }
+  }
+</style>
+
   <template>
-    <button on-click="_langChange">Change Language</button>
+    <paper-dropdown-menu label="Language" vertical-align="bottom" horizontal-align="left">
+      <paper-listbox class="dropdown-content" selected="[[selectedLangIndex]]">
+        <paper-item>Spanish (ES)</paper-item>
+        <paper-item>English (EN)</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
   </template>
 
   <script>
@@ -16,16 +37,44 @@
     Polymer({
       is: 'pro-language-switcher',
 
+      properties: {
+        selectedLangIndex: Number
+      },
+
+      attached: function(){
+        switch(window.I18n.lang) {
+            case 'es':
+            this.selectedLangIndex = 0;
+                break;
+            case 'en':
+            this.selectedLangIndex = 1;
+                break;
+            default:;
+        }
+      },
+
       _updateLangQueryStringParameter: function(value) {
         window.I18n.lang = value;
         window.location.href = window.location.updateQueryStringParameter(window.location.href, 'lang', value);
       },
 
-      _langChange: function() {
-        if (window.I18n.lang === 'en' ) {
-          this._updateLangQueryStringParameter('es');
-        } else {
-          this._updateLangQueryStringParameter('en');
+      _langChange: function(language) {
+        if (language !== window.I18n.lang) {
+          this._updateLangQueryStringParameter(language);
+        }
+      },
+
+      listeners: {
+        'selected-item-label-changed': 'langChanged'
+      },
+
+      langChanged: function(newLangEvent){
+        var newLang = newLangEvent.detail.value;
+        if(newLang === 'Spanish (ES)'){
+          this._langChange('es');
+        }
+        if(newLang === 'English (EN)'){
+          this._langChange('en');
         }
       }
     });
