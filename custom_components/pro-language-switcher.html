@@ -80,6 +80,8 @@
 
       _langChanged: function(newLangEvent){
         var newLang = newLangEvent.detail.value;
+        var es = this.t('pro-language-switcher-es');
+        var en = this.t('pro-language-switcher-en');
         if(newLang === es){
           this._langChange('es');
         }
