@@ -85,13 +85,13 @@
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
 
     <paper-menu multi class="paperMenu">
-      <pro-experience-submenu header-text="Education">
+      <pro-experience-submenu header-text="{{t('pro-experience-header-education')}}">
         <paper-menu class="menu-content menu" multi>
           <paper-item>
             <div class="section">
               UPM - Universidad Politécnica de Madrid
               <br>
-              Mathematics and Computer Science
+              {{t('pro-experience-header-education-degree')}}
               <br>
               2012 - 2016
             </div>
@@ -100,20 +100,20 @@
             <div class="section">
               RUC - Roskilde University (Erasmus)
               <br>
-              Computer Science
+              {{t('pro-experience-header-education-degree-erasmus')}}
               <br>
-              Autumn 2015
+              {{t('pro-experience-header-education-degree-erasmus-season')}} 2015
             </div>
           </paper-item>
         </paper-menu>
       </pro-experience-submenu>
-      <pro-experience-submenu header-text="Jobs">
+      <pro-experience-submenu header-text="{{t('pro-experience-header-jobs')}}">
         <paper-menu class="menu-content menu" multi>
           <paper-item>
             <div class="section">
               BABEL
               <br>
-              Web Developer (AngularJS)
+              {{t('pro-experience-header-jobs-dev')}} (AngularJS)
               <br>
               02/2016 - 07/2016
             </div>
@@ -122,57 +122,66 @@
             <div class="section">
               BBVA w/ BABEL
               <br>
-              Web Developer (Polymer)
+              {{t('pro-experience-header-jobs-dev')}} (Polymer)
               <br>
-              07/2016 - Currently
+              07/2016 - 02/2017
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              BBVA w/ BABEL
+              <br>
+              {{t('pro-experience-header-jobs-dev')}} (Polymer 2.0)
+              <br>
+              02/2016 - {{t('pro-experience-header-jobs-currently')}}
             </div>
           </paper-item>
         </paper-menu>
       </pro-experience-submenu>
-      <pro-experience-submenu header-text="Projects">
+      <pro-experience-submenu header-text="{{t('pro-experience-header-projects')}}">
         <paper-menu class="menu-content menu" multi>
           <paper-item>
             <div class="section">
               <iron-icon class="ironIcon" icon="hardware:desktop-windows"></iron-icon>
               <br>
-              Checkers AI
+              {{t('pro-experience-header-projects-checkers')}}
               <br>
-              C++ (console application)
+              C++ ({{t('pro-experience-header-projects-checkers-type')}})
               <br>
-              Autumn 2015
+              {{t('pro-experience-header-projects-checkers-season')}} 2015
             </div>
           </paper-item>
           <paper-item>
             <div class="section">
               <iron-icon class="ironIcon" icon="hardware:desktop-windows"></iron-icon>
               <br>
-              FullStack StackOverflow clone
+              {{t('pro-experience-header-projects-sova')}}
               <br>
-              C# and Jquery
+              C# & Jquery
               <br>
-              Autumn 2015
+              {{t('pro-experience-header-projects-sova-season')}} 2015
             </div>
           </paper-item>
           <paper-item>
             <div class="section">
               <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
               <br>
-              Online music player
+              {{t('pro-experience-header-projects-babelmusic')}}
               <br>
               HTML5, CSS3, JS
               <br>
-              Early 2016
+              {{t('pro-experience-header-projects-babelmusic-season')}} 2016
             </div>
           </paper-item>
           <paper-item>
             <div class="section">
               <iron-icon class="ironIcon" icon="vaadin-icons:server"></iron-icon>
               <br>
-              Web backend
+              {{t('pro-experience-header-projects-webbackend')}}
               <br>
-              NodeJS and MongoDB
+              NodeJS & MongoDB
               <br>
-              Early 2016
+              {{t('pro-experience-header-projects-webbackend-season')}} 2016
             </div>
           </paper-item>
           <paper-item>
@@ -180,27 +189,27 @@
               <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
               <iron-icon class="ironIcon" icon="vaadin-icons:gamepad"></iron-icon>
               <br>
-              VR videogame
+              {{t('pro-experience-header-projects-vrvideogame')}}
               <br>
-              A-frame
+              A-Frame
               <br>
-              Late 2016
+              {{t('pro-experience-header-projects-vrvideogame-season')}} 2016
             </div>
           </paper-item>
           <paper-item>
             <div class="section">
               <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
               <br>
-              Personal Website
+              {{t('pro-experience-header-projects-hecmocerpro')}}
               <br>
-              Web Components
+              {{t('pro-experience-header-projects-hecmocerpro-technologies')}} & Polymer
               <br>
-              Late 2016
+              {{t('pro-experience-header-projects-hecmocerpro-season')}} 2016
             </div>
           </paper-item>
         </paper-menu>
       </pro-experience-submenu>
-      <pro-experience-submenu header-text="Technologies">
+      <pro-experience-submenu header-text="{{t('pro-experience-header-technologies')}}">
         <paper-menu class="menu-content menu techMenu" multi>
           <paper-item style="display: inline; padding: 0">
             <iron-icon class="ironIcon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
@@ -332,6 +341,75 @@
         created: function() {
           this.appendLocale('es', 'pro-experience-header', 'Experiencia');
           this.appendLocale('en', 'pro-experience-header', 'Experience');
+
+          this.appendLocale('es', 'pro-experience-header-education', 'Estudios');
+          this.appendLocale('en', 'pro-experience-header-education', 'Education');
+
+          this.appendLocale('es', 'pro-experience-header-jobs', 'Trabajos');
+          this.appendLocale('en', 'pro-experience-header-jobs', 'Jobs');
+
+          this.appendLocale('es', 'pro-experience-header-projects', 'Proyectos');
+          this.appendLocale('en', 'pro-experience-header-projects', 'Projects');
+
+          this.appendLocale('es', 'pro-experience-header-technologies', 'Tecnologías');
+          this.appendLocale('en', 'pro-experience-header-technologies', 'Technologies');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree', 'Matemáticas e Informática');
+          this.appendLocale('en', 'pro-experience-header-education-degree', 'Mathematics and Computer Science');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree-erasmus', 'Asignaturas de Máster Informática');
+          this.appendLocale('en', 'pro-experience-header-education-degree-erasmus', 'Computer Science Master Subjects');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree-erasmus-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-education-degree-erasmus-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-jobs-dev', 'Desarrollador Web');
+          this.appendLocale('en', 'pro-experience-header-jobs-dev', 'Web Developer');
+
+          this.appendLocale('es', 'pro-experience-header-jobs-currently', 'Actualmente');
+          this.appendLocale('en', 'pro-experience-header-jobs-currently', 'Currently');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers', 'Inteligencia Artificial - juego de Las Damas');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers', 'Checkers Artificial Inteligence');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers-type', 'aplicación de consola');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers-type', 'console application');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-projects-sova', 'Clon Full-stack de StackOverflow');
+          this.appendLocale('en', 'pro-experience-header-projects-sova', 'Full-stack StackOverflow clone');
+
+          this.appendLocale('es', 'pro-experience-header-projects-sova-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-projects-sova-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-projects-babelmusic', 'Reproductor de música online');
+          this.appendLocale('en', 'pro-experience-header-projects-babelmusic', 'Online music player');
+
+          this.appendLocale('es', 'pro-experience-header-projects-babelmusic-season', 'Principios');
+          this.appendLocale('en', 'pro-experience-header-projects-babelmusic-season', 'Early');
+
+          this.appendLocale('es', 'pro-experience-header-projects-webbackend', 'Backend web');
+          this.appendLocale('en', 'pro-experience-header-projects-webbackend', 'Web backend');
+
+          this.appendLocale('es', 'pro-experience-header-projects-webbackend-season', 'Principios');
+          this.appendLocale('en', 'pro-experience-header-projects-webbackend-season', 'Early');
+
+          this.appendLocale('es', 'pro-experience-header-projects-vrvideogame', 'Videojuego VR');
+          this.appendLocale('en', 'pro-experience-header-projects-vrvideogame', 'VR videogame');
+
+          this.appendLocale('es', 'pro-experience-header-projects-vrvideogame-season', 'Finales');
+          this.appendLocale('en', 'pro-experience-header-projects-vrvideogame-season', 'Late');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro', 'Portfolio web');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro', 'Personal website');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro-technologies', 'Componentes web');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro-technologies', 'Web Components');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro-season', 'Finales');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro-season', 'Late');
         },
       });
     })();
