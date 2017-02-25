@@ -7,19 +7,17 @@
   <template>
     <style include="shared-styles">
       :host {
-        display: block;
         background: #333333;
         color: #eeeeee;
         padding: 10px;
-      }
-      .floatRight{
-        float: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     </style>
 
-    <div>
       <pro-language-switcher></pro-language-switcher>
-      <div class="floatRight">
+      <div>
         <div>
           HecmocerPro
         </div>
@@ -27,7 +25,6 @@
           15/01/16 - 0.0.1
         </div>
       </div>
-    </div>
   </template>
 
   <script>
