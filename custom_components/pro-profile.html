@@ -78,8 +78,23 @@
     <img src="../images/smSquare.png" class="img" on-click="openDialog">
     <div class="text">
       <h2 class="textHeader">Héctor Moreno Cervera</h2>
-      <!--DETALLES EN NEGRITA-->
-      <p>{{t('pro-profile-about-me')}}</p>
+      <ul>
+        <li>
+          <p inner-h-t-m-l="{{t('pro-profile-about-me-1')}}"></p>
+        </li>
+        <li>
+          <p inner-h-t-m-l="{{t('pro-profile-about-me-2')}}"></p>
+        </li>
+        <li>
+          <p inner-h-t-m-l="{{t('pro-profile-about-me-3')}}"></p>
+        </li>
+        <li>
+          <p inner-h-t-m-l="{{t('pro-profile-about-me-4')}}"></p>
+        </li>
+        <li>
+          <p inner-h-t-m-l="{{t('pro-profile-about-me-5')}}"></p>
+        </li>
+      </ul>
     </div>
     <paper-dialog id="dialog" class="dialog" with-backdrop>
       <img src="../images/profile.jpg" class="dialogImage" style="padding: 0; margin: 0;">
@@ -97,10 +112,19 @@
         behaviors: [window.MyBehaviours.proI18nBehaviour],
 
         created: function() {
-          this.appendLocale('es', 'pro-profile-about-me', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
-          this.appendLocale('en', 'pro-profile-about-me', "TRANSLATED I'm a 22 years old passionate web developer. I finished my graduated in Mathematics and Computer Science in 2016, the same year in which I started working as Front-end web developer in BABEL for BBVA using Polymer & Webcomponents. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit essecillumdolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+          this.appendLocale('en', 'pro-profile-about-me-1', "I'm a 22 years old passionate web developer from Spain.");
+          this.appendLocale('en', 'pro-profile-about-me-2', "In 2016 I graduated in Mathematics and Computer Science");
+          this.appendLocale('en', 'pro-profile-about-me-3', "In 2016 I started working as Front-end web developer in BABEL for BBVA using Polymer & Webcomponents.");
+          this.appendLocale('en', 'pro-profile-about-me-4', "Besides web development I've been also been interested in videogame programming");
+          this.appendLocale('en', 'pro-profile-about-me-5', "I believe that travelling and meeting people from different cultures is one of the most fullfilling and enriching experiences");
 
-          this.appendLocale('es', 'pro-profile-header', 'Perfil');
+          this.appendLocale('es', 'pro-profile-about-me-1', "Con 22 años, soy un desarrollador web apasionado de Madrid");
+          this.appendLocale('es', 'pro-profile-about-me-2', "En 2016 me gradué en Matemáticas e Informática");
+          this.appendLocale('es', 'pro-profile-about-me-3', "En 2016 empecé a trabajar como desarrollador web Front-end en BABEL para BBVA con Polymer & Webcomponents.");
+          this.appendLocale('es', 'pro-profile-about-me-4', "Además del desarrollo web, también siento interés por la programación de videojuegos");
+          this.appendLocale('es', 'pro-profile-about-me-5', "Opino que viajar y conocer personas de diferentes culturas es una de las experiencias más enriquecedoras a nivel personal");
+
+          this.appendLocale('es', 'pro-profile-header', 'Sobre mi');
           this.appendLocale('en', 'pro-profile-header', 'About me');
         },
 
