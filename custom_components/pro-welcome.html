@@ -14,7 +14,7 @@
       }
       .imageCenter{
         height: 100%;
-        margin-left: calc(50% - 50vh);
+        margin-left: calc(40% - 60vh);
         /* 985 / 2 = 492 */
       }
     </style>
@@ -22,7 +22,7 @@
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
 
     <template is="dom-if" if="{{!queryMatches}}">
-      <img class="imageCenter" src="../images/profile.jpg" alt="">
+      <img class="imageCenter" src="../images/WelcomeXS.jpg" alt="">
     </template>
 
     <template is="dom-if" if="{{queryMatches}}">
