@@ -2,9 +2,9 @@
 <link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='pro-i18ned-component.html'>
 <link rel='import' href='./pro-section-header.html'>
-<link rel='import' href='./pro-journey.html'>
+<link rel='import' href='./pro-place.html'>
 
-<dom-module id="pro-journeys">
+<dom-module id="pro-places">
   <template>
     <style include="shared-styles">
       :host {
@@ -17,81 +17,81 @@
       }
     </style>
 
-    <pro-section-header text="{{t('pro-journeys-header')}}"></pro-section-header>
+    <pro-section-header text="{{t('pro-places-header')}}"></pro-section-header>
 
     <iron-grid current-screenformat="{{screenSize}}" class="container">
 
-        <pro-journey
+        <pro-place
           image-url="../images/Rome.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Germany.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Manzanares.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Paris.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Brussels.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Hillerod.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Helsinki.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Stockholm.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Odense.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/RUC.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/Merida.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
-        <pro-journey
+        <pro-place
           image-url="../images/London.jpg"
-          text="{{t('pro-journeys-textn')}}"
+          text="{{t('pro-places-textn')}}"
           class="xs12 s6 m4 l3">
-        </pro-journey>
+        </pro-place>
 
     </iron-grid>
 
@@ -102,16 +102,13 @@
       'use strict';
 
       Polymer({
-        is: 'pro-journeys',
+        is: 'pro-places',
 
         behaviors: [window.MyBehaviours.proI18nBehaviour],
 
         created: function() {
-          this.appendLocale('es', 'pro-journeys-header', 'Viajes');
-          this.appendLocale('en', 'pro-journeys-header', 'Journeys');
-
-          this.appendLocale('es', 'pro-journeys-textn', 'lorem ipsum dolor sit amet ESP');
-          this.appendLocale('en', 'pro-journeys-textn', 'lorem ipsum dolor sit amet ENG');
+          this.appendLocale('es', 'pro-places-header', 'Viajes');
+          this.appendLocale('en', 'pro-places-header', 'Places');
         }
       });
     })();
