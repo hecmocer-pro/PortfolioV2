@@ -17,6 +17,49 @@
         margin-left: calc(40% - 60vh);
         /* 985 / 2 = 492 */
       }
+      .overlay-title{
+        font-family: 'Pacifico', cursive;
+        font-size: 36px;
+        text-shadow: 1px 1px 1px black, 2px 2px 15px #0B486B;
+        top: 100px;
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        color: #eeeeee;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0 10px 0;
+        transform: skewY(-1deg);
+      }
+      .overlay-text{
+        transform: skewY(1deg);
+      }
+      .overlay-scroll{
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        color: #ffeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 35px;
+        left: 35px;
+        width: 50px;
+        height: 60px;
+      }
+      .icon{
+        width: 40px;
+        height: 40px;
+
+        animation-name: backandforth;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes backandforth {
+        0%   {top: -10px;}
+        100% {top: 10px;}
+      }
     </style>
 
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
@@ -31,6 +74,17 @@
         Your browser does not support the video tag.
       </video>
     </template>
+
+    <div class="overlay-title">
+      <span class="overlay-text">
+        Hecmocer
+      </span>
+      <div class="skewdiv"></div>
+    </div>
+
+    <div class="overlay-scroll">
+      <iron-icon class="icon" icon="vaadin-icons:angle-double-down"></iron-icon>
+    </div>
 
   </template>
 
