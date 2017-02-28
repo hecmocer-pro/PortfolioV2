@@ -23,7 +23,7 @@
   </style>
 
   <template>
-    <paper-dropdown-menu label="Language" vertical-align="bottom" horizontal-align="left">
+    <paper-dropdown-menu label="{{t('pro-language-switcher-language')}}" vertical-align="bottom" horizontal-align="left">
       <paper-listbox class="dropdown-content" selected="[[selectedLangIndex]]">
         <paper-item>{{t('pro-language-switcher-es')}}</paper-item>
         <paper-item>{{t('pro-language-switcher-en')}}</paper-item>
@@ -49,6 +49,9 @@
         this.appendLocale('en', 'pro-language-switcher-es', 'Spanish (ES)');
         this.appendLocale('es', 'pro-language-switcher-en', 'Inglés (EN)');
         this.appendLocale('en', 'pro-language-switcher-en', 'English (EN)');
+
+        this.appendLocale('es', 'pro-language-switcher-language', 'Idioma');
+        this.appendLocale('en', 'pro-language-switcher-language', 'Language');
       },
 
       attached: function(){
