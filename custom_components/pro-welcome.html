@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner-lite.html">
 <link rel="import" href="../src/shared-styles.html">
 
 <dom-module id="pro-welcome">
@@ -60,6 +61,18 @@
         0%   {top: -10px;}
         100% {top: 10px;}
       }
+
+      .spinner-container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .spinner{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        --paper-spinner-stroke-width: 6px;
+      }
     </style>
 
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
@@ -74,6 +87,10 @@
         Your browser does not support the video tag.
       </video>
     </template>
+
+    <div class="spinner-container">
+      <paper-spinner-lite active class="spinner"></paper-spinner-lite>
+    </div>
 
     <div class="overlay-title">
       <span class="overlay-text">
