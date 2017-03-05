@@ -45,9 +45,16 @@
         top: -55px;
         transition: opacity 0.6s;
       }
-      .img-info-hover{
+      .img-info-active{
         opacity: 1;
         top: -55px;
+      }
+      .img-info-lg{
+        top: -115px;
+        display: block;
+        font-size: 25px;
+        left: 0;
+        padding: 20px 30px !important;
       }
 
       .dialog{
@@ -71,6 +78,7 @@
 
     <paper-dialog id="dialog" class="dialog" with-backdrop>
       <img src="{{imageUrl}}" alt="" class="dialogImage" style="padding: 0; margin: 0;">
+      <span class="img-info img-info-active img-info-lg">[[imageInfo]]</span>
     </paper-dialog>
 
   </template>
@@ -96,12 +104,12 @@
         },
 
         addHoverClass: function(){
-          this.$.imgInfo.classList.add('img-info-hover');
+          this.$.imgInfo.classList.add('img-info-active');
           this.$.img.classList.add('hoverable-hover');
         },
 
         removeHoverClass: function(){
-          this.$.imgInfo.classList.remove('img-info-hover');
+          this.$.imgInfo.classList.remove('img-info-active');
           this.$.img.classList.remove('hoverable-hover');
         },
 
