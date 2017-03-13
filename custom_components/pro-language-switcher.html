@@ -20,10 +20,13 @@
         color: #eeeeee;
       }
     }
+    .dropdown-menu{
+      width: 150px;
+    }
   </style>
 
   <template>
-    <paper-dropdown-menu label="{{t('pro-language-switcher-language')}}" vertical-align="bottom" horizontal-align="left">
+    <paper-dropdown-menu label="{{t('pro-language-switcher-language')}}" vertical-align="bottom" horizontal-align="left" class="dropdown-menu">
       <paper-listbox class="dropdown-content" selected="[[selectedLangIndex]]">
         <paper-item>{{t('pro-language-switcher-es')}}</paper-item>
         <paper-item>{{t('pro-language-switcher-en')}}</paper-item>
