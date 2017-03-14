@@ -1,10 +1,10 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "start_url": "/?homescreen=1",
+  "name": "Hecmocer",
+  "short_name": "Hecmocer",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#DDDDDD",
+  "background_color": "#DDDDDD",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
