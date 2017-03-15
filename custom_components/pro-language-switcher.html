@@ -1,6 +1,6 @@
 <link rel='import' href='./pro-i18n-behaviour.html'>
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
 
 <dom-module id="pro-language-switcher">
@@ -11,6 +11,7 @@
   </style>
 
   <style is="custom-style">
+
     paper-dropdown-menu {
       --paper-input-container-label: {
         font-style: italic;
@@ -20,9 +21,11 @@
         color: #eeeeee;
       }
     }
+
     .dropdown-menu{
       width: 150px;
     }
+
   </style>
 
   <template>
@@ -45,6 +48,10 @@
 
       properties: {
         selectedLangIndex: Number
+      },
+
+      listeners: {
+        'selected-item-label-changed': '_langChanged'
       },
 
       created: function() {
@@ -78,10 +85,6 @@
         if (language !== window.I18n.lang) {
           this._updateLangQueryStringParameter(language);
         }
-      },
-
-      listeners: {
-        'selected-item-label-changed': '_langChanged'
       },
 
       _langChanged: function(newLangEvent){
