@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-grid/iron-grid.html">
 <link rel='import' href='pro-i18ned-component.html'>
 <link rel='import' href='./pro-section-header.html'>
 <link rel='import' href='./pro-place.html'>
@@ -9,6 +10,7 @@
       :host {
         display: block;
       }
+
       .container{
         margin-left: 10%;
         margin-right: 10%;
@@ -90,13 +92,6 @@
           class="xs12 s6 m4 l3">
         </pro-place>
 
-    <!--<pro-place
-          image-url="../images/Merida.jpg"
-          image-info="Merida, Spain"
-          text="{{t('pro-places-textn')}}"
-          class="xs12 s6 m4 l3">
-        </pro-place>-->
-
         <pro-place
           image-url="../images/London.jpg"
           image-info="{{t('pro-places-london')}}"
@@ -114,7 +109,6 @@
     </iron-grid>
 
   </template>
-
   <script>
    (function() {
       'use strict';
@@ -130,26 +124,37 @@
 
           this.appendLocale('en', 'pro-places-rome', 'Rome, Italy');
           this.appendLocale('es', 'pro-places-rome', 'Roma, Italia');
+
           this.appendLocale('en', 'pro-places-germany', 'Neuschwanstein, Germany');
           this.appendLocale('es', 'pro-places-germany', 'Neuschwanstein, Alemania');
+
           this.appendLocale('en', 'pro-places-manzanares', 'Manzanares el Real, Spain');
           this.appendLocale('es', 'pro-places-manzanares', 'Manzanares el Real, España');
+
           this.appendLocale('en', 'pro-places-paris', 'Paris, France');
           this.appendLocale('es', 'pro-places-paris', 'París, Francia');
+
           this.appendLocale('en', 'pro-places-brussels', 'Brussels, Belgium');
           this.appendLocale('es', 'pro-places-brussels', 'Bruselas, Bélgica');
+
           this.appendLocale('en', 'pro-places-hillerod', 'Hillerod, Denmark');
           this.appendLocale('es', 'pro-places-hillerod', 'Hillerod, Dinamarca');
+
           this.appendLocale('en', 'pro-places-helsinki', 'Helsinki, Finland');
           this.appendLocale('es', 'pro-places-helsinki', 'Helsinki, Finlandia');
+
           this.appendLocale('en', 'pro-places-malmo', 'Stockholm, Sweden');
           this.appendLocale('es', 'pro-places-malmo', 'Estocolmo, Suecia');
+
           this.appendLocale('en', 'pro-places-odense', 'Odense, Denmark');
           this.appendLocale('es', 'pro-places-odense', 'Odense, Dinamarca');
+
           this.appendLocale('en', 'pro-places-ruc', 'RUC, Denmark');
           this.appendLocale('es', 'pro-places-ruc', 'RUC, Dinamarca');
+
           this.appendLocale('en', 'pro-places-london', 'London, Great Britain');
           this.appendLocale('es', 'pro-places-london', 'Londres, Gran Bretaña');
+
           this.appendLocale('en', 'pro-places-extremadura', 'Extremadura, Spain');
           this.appendLocale('es', 'pro-places-extremadura', 'Extremadura, España');
         }
