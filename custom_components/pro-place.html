@@ -9,6 +9,10 @@
         display: block;
         width: 100%;
       }
+      p{
+        display: inline;
+        margin: 0;
+      }
 
       .wrapper{
         background-color: transparent;
@@ -82,12 +86,12 @@
 
     <div class="wrapper">
       <img id="img" src="{{imageUrl}}" alt="" class="hoverable img" on-click="openDialog" on-mouseover="addHoverClass" on-mouseout="removeHoverClass">
-      <span id="imgInfo" class="img-info" on-click="openDialog" on-mouseover="addHoverClass" on-mouseout="removeHoverClass">[[imageInfo]]</span>
+      <p id="imgInfo" class="img-info" on-click="openDialog" on-mouseover="addHoverClass" on-mouseout="removeHoverClass">[[imageInfo]]</p>
     </div>
 
     <paper-dialog id="dialog" class="dialog" with-backdrop>
       <img src="{{imageUrl}}" alt="" class="dialog-image">
-      <span class="img-info img-info-active img-info-dialog">[[imageInfo]]</span>
+      <p class="img-info img-info-active img-info-dialog">[[imageInfo]]</p>
     </paper-dialog>
 
   </template>
