@@ -11,39 +11,39 @@
       }
 
       .wrapper{
+        background-color: transparent;
         height: 100%;
-        margin-top: 40px;
         margin-left: 20px;
         margin-right: 20px;
-        background-color: transparent;
+        margin-top: 40px;
       }
 
       .hoverable{
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
-        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
         overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
       }
 
       .hoverable-hover{
-        transform: translate(0, -8px);
         box-shadow: 0 40px 40px rgba(0,0,0,.16);
+        transform: translate(0, -8px);
       }
 
       .img{
+        border: solid rgba(0, 0, 0, 0.25) 1px;
         cursor: pointer;
         max-height: 100%;
         max-width: 100%;
-        border: solid rgba(0, 0, 0, 0.25) 1px
       }
 
       .img-info {
-        opacity: 0;
-        position: relative;
-        color: #eeeeee;
-        text-shadow: 0 0 5px black;
         background-color: rgba(0,0,0,0.7);
-        padding: 10px;
+        color: #eeeeee;
         left: 1px;
+        opacity: 0;
+        padding: 10px;
+        position: relative;
+        text-shadow: 0 0 5px black;
         top: -55px;
         transition: opacity 0.6s;
       }
@@ -51,14 +51,14 @@
         opacity: 1;
         top: -55px;
       }
-      .img-info-lg{
-        position: relative;
-        top: -25.1px;
-        left: 0;
+      .img-info-dialog{
+        border-radius: 0 0 25px 25px;
         display: block;
         font-size: 25px;
+        left: 0;
         padding: 20px 30px !important;
-        border-radius: 0 0 25px 25px;
+        position: relative;
+        top: -25.1px;
       }
 
       .dialog{
@@ -69,7 +69,7 @@
         overflow: hidden;
       }
 
-      .dialogImage{
+      .dialog-image{
         border-radius: 15px 15px 0 0;
         margin: 0 !important;
         max-height: 80vh;
@@ -86,8 +86,8 @@
     </div>
 
     <paper-dialog id="dialog" class="dialog" with-backdrop>
-      <img src="{{imageUrl}}" alt="" class="dialogImage">
-      <span class="img-info img-info-active img-info-lg">[[imageInfo]]</span>
+      <img src="{{imageUrl}}" alt="" class="dialog-image">
+      <span class="img-info img-info-active img-info-dialog">[[imageInfo]]</span>
     </paper-dialog>
 
   </template>
