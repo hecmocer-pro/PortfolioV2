@@ -5,78 +5,78 @@
 <link rel="import" href="../bower_components/vaadin-icons/vaadin-icons.html">
 
 <dom-module id="pro-welcome">
-  <style>
-    :host {
-      display: block;
-      overflow: hidden;
-    }
-
-    .videoPosition{
-      margin-left: calc(40% - 768px);
-      margin-top: calc(50vh - 540px);
-    }
-    .imagePosition{
-      height: 100%;
-      margin-left: calc(40% - 60vh);
-    }
-
-    .overlayContainer{
-      background: rgba(0,0,0,0.5);
-      color: #eeeeee;
-      display: flex;
-      font-family: 'Pacifico', cursive;
-      font-size: 36px;
-      justify-content: center;
-      padding: 5px 0 10px 0;
-      position: absolute;
-      text-shadow: 1px 1px 1px black, 2px 2px 15px #0B486B;
-      top: 100px;
-      transform: skewY(-1deg);
-      width: 100%;
-    }
-    .overlayText{
-      transform: skewY(1deg);
-    }
-
-    .scrollIndicatorContainer{
-      align-items: center;
-      background: rgba(0,0,0,0.5);
-      bottom: 35px;
-      color: #eeeeee;
-      display: flex;
-      height: 60px;
-      justify-content: center;
-      left: 35px;
-      position: absolute;
-      width: 50px;
-    }
-    .scrollIndicator{
-      width: 40px;
-      height: 40px;
-
-      animation-name: backandforth;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-out;
-    }
-    @keyframes backandforth {
-      0%   {top: -10px;}
-      100% {top: 10px;}
-    }
-
-    .spinnerContainer{
-      align-items: center;
-      display: flex;
-      height: 100%;
-    }
-    .spinner{
-      height: 100px;
-      margin: 0 auto;
-      width: 100px;
-      --paper-spinner-stroke-width: 6px;
-    }
-  </style>
   <template>
+    <style>
+      :host {
+        display: block;
+        overflow: hidden;
+      }
+
+      .videoPosition{
+        margin-left: calc(40% - 768px);
+        margin-top: calc(50vh - 540px);
+      }
+      .imagePosition{
+        height: 100%;
+        margin-left: calc(40% - 60vh);
+      }
+
+      .overlayContainer{
+        background: rgba(0,0,0,0.5);
+        color: #eeeeee;
+        display: flex;
+        font-family: 'Pacifico', cursive;
+        font-size: 36px;
+        justify-content: center;
+        padding: 5px 0 10px 0;
+        position: absolute;
+        text-shadow: 1px 1px 1px black, 2px 2px 15px #0B486B;
+        top: 100px;
+        transform: skewY(-1deg);
+        width: 100%;
+      }
+      .overlayText{
+        transform: skewY(1deg);
+      }
+
+      .scrollIndicatorContainer{
+        align-items: center;
+        background: rgba(0,0,0,0.5);
+        bottom: 35px;
+        color: #eeeeee;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        left: 35px;
+        position: absolute;
+        width: 50px;
+      }
+      .scrollIndicator{
+        width: 40px;
+        height: 40px;
+
+        animation-name: backandforth;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+      @keyframes backandforth {
+        0%   {top: -10px;}
+        100% {top: 10px;}
+      }
+
+      .spinnerContainer{
+        align-items: center;
+        display: flex;
+        height: 100%;
+      }
+      .spinner{
+        height: 100px;
+        margin: 0 auto;
+        width: 100px;
+        --paper-spinner-stroke-width: 6px;
+      }
+    </style>
 
     <iron-media-query query="(min-width: 600px)" query-matches="{{queryMatches}}"></iron-media-query>
 
