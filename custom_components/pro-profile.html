@@ -1,13 +1,17 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../src/shared-styles.html">
 <link rel='import' href='./pro-i18n-behaviour.html'>
 <link rel='import' href='./pro-section-header.html'>
 
 <dom-module id="pro-profile">
   <template>
-    <style include="shared-styles">
+    <style>
       :host {
         display: block;
+      }
+
+      .img-container{
+        display: flex;
+        align-items: center;
       }
       .img{
         cursor: pointer;
@@ -22,16 +26,26 @@
       .img:hover{
         border-radius: 10%;
       }
-      .img-container{
-        display: flex;
-        align-items: center;
+
+      .text-container {
+        margin-left: 5%;
+        margin-right: 5%;
       }
       .textHeader{
         text-align: center;
       }
-      .text {
-        margin-left: 5%;
-        margin-right: 5%;
+
+      .dialog{
+        margin: 0;
+        max-width: 90%;
+        overflow: hidden;
+        box-shadow: none;
+        background-color: transparent;
+      }
+      .dialogImage{
+        border-radius: 25px;
+        max-height: 90vh;
+        max-width: 100%;
       }
 
       @media (min-width: 600px) {
@@ -39,7 +53,6 @@
           width: 50%;
         }
       }
-
       @media (min-width: 800px) {
         .container{
           display: flex;
@@ -51,17 +64,15 @@
         .img {
           width: 300px;
         }
-        .text {
+        .text-container {
           flex: 1;
         }
       }
-
       @media (min-width: 1050px) {
         .container{
           margin: 0 15%;
         }
       }
-
       @media (min-width: 1300px) {
         .container{
           margin: 0 20%;
@@ -70,20 +81,6 @@
           width: 40vh;
         }
       }
-
-      .dialog{
-        margin: 0;
-        max-width: 90%;
-        overflow: hidden;
-        box-shadow: none;
-        background-color: transparent;
-      }
-
-      .dialogImage{
-        border-radius: 25px;
-        max-height: 90vh;
-        max-width: 100%;
-      }
     </style>
 
     <pro-section-header text="{{t('pro-profile-header')}}"></pro-section-header>
@@ -91,23 +88,23 @@
       <div class="img-container">
         <img src="../images/smSquare.png" class="img" on-click="openDialog">
       </div>
-      <div class="text">
+      <div class="text-container">
         <h2 class="textHeader">Héctor Moreno Cervera</h2>
         <ul>
           <li>
-            <p inner-h-t-m-l="{{t('pro-profile-about-me-1')}}"></p>
+            <p>{{t('pro-profile-about-me-1')}}</p>
           </li>
           <li>
-            <p inner-h-t-m-l="{{t('pro-profile-about-me-2')}}"></p>
+            <p>{{t('pro-profile-about-me-2')}}</p>
           </li>
           <li>
-            <p inner-h-t-m-l="{{t('pro-profile-about-me-3')}}"></p>
+            <p>{{t('pro-profile-about-me-3')}}</p>
           </li>
           <li>
-            <p inner-h-t-m-l="{{t('pro-profile-about-me-4')}}"></p>
+            <p>{{t('pro-profile-about-me-4')}}</p>
           </li>
           <li>
-            <p inner-h-t-m-l="{{t('pro-profile-about-me-5')}}"></p>
+            <p>{{t('pro-profile-about-me-5')}}</p>
           </li>
         </ul>
       </div>
