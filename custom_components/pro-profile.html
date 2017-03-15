@@ -10,18 +10,18 @@
       }
 
       .img-container{
-        display: flex;
         align-items: center;
+        display: flex;
       }
       .img{
-        cursor: pointer;
-        display: block;
         border-radius: 50%;
         border: solid 10px #eeeeee;
+        cursor: pointer;
+        display: block;
         height: auto;
         margin: 0 auto;
-        width: 65%;
         transition: border-radius 400ms;
+        width: 65%;
       }
       .img:hover{
         border-radius: 10%;
@@ -31,21 +31,23 @@
         margin-left: 5%;
         margin-right: 5%;
       }
-      .textHeader{
+      .text-header{
         text-align: center;
       }
 
       .dialog{
+        background-color: transparent;
+        box-shadow: none;
         margin: 0;
         max-width: 90%;
         overflow: hidden;
-        box-shadow: none;
-        background-color: transparent;
       }
-      .dialogImage{
+      .dialog-image{
         border-radius: 25px;
+        margin: 0 !important;
         max-height: 90vh;
         max-width: 100%;
+        padding: 0 !important;
       }
 
       @media (min-width: 600px) {
@@ -89,7 +91,7 @@
         <img src="../images/smSquare.png" class="img" on-click="openDialog">
       </div>
       <div class="text-container">
-        <h2 class="textHeader">Héctor Moreno Cervera</h2>
+        <h2 class="text-header">Héctor Moreno Cervera</h2>
         <ul>
           <li>
             <p>{{t('pro-profile-about-me-1')}}</p>
@@ -110,7 +112,7 @@
       </div>
     </div>
     <paper-dialog id="dialog" class="dialog" with-backdrop>
-      <img src="../images/Profile.jpg" class="dialogImage" style="padding: 0; margin: 0;">
+      <img src="../images/Profile.jpg" class="dialog-image">
     </paper-dialog>
 
   </template>

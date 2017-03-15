@@ -17,7 +17,7 @@
         padding: 10px;
       }
 
-      .paperMenu{
+      .paper-menu{
         background-color: transparent;
         margin-left: 10%;
         margin-right: 10%;
@@ -35,15 +35,23 @@
         padding: 10px 0 10px 20px;
       }
 
-      .ironIcon{
+      .iron-icon{
         margin-bottom: 3px;
       }
 
-      .techMenu{
+      .tech-menu{
         height: 30px;
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+      }
+
+      .paper-item-animated{
+        display: inline !important;
+        padding: 0 !important;
+      }
+      .paper-item-tech{
+        display: inline !important;
       }
 
       .animatedChevron {
@@ -63,7 +71,7 @@
     </style>
 
     <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
-    <paper-menu multi class="paperMenu">
+    <paper-menu multi class="paper-menu">
       <pro-experience-submenu header-text="📚 {{t('pro-experience-header-education')}}">
         <paper-menu class="menu-content menu" multi>
           <paper-item>
@@ -121,7 +129,7 @@
         <paper-menu class="menu-content menu" multi>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="hardware:desktop-windows"></iron-icon>
+              <iron-icon class="iron-icon" icon="hardware:desktop-windows"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-checkers')}}
               <br>
@@ -132,7 +140,7 @@
           </paper-item>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="hardware:desktop-windows"></iron-icon>
+              <iron-icon class="iron-icon" icon="hardware:desktop-windows"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-sova')}}
               <br>
@@ -143,7 +151,7 @@
           </paper-item>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-babelmusic')}}
               <br>
@@ -154,7 +162,7 @@
           </paper-item>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="vaadin-icons:server"></iron-icon>
+              <iron-icon class="iron-icon" icon="vaadin-icons:server"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-webbackend')}}
               <br>
@@ -165,8 +173,8 @@
           </paper-item>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
-              <iron-icon class="ironIcon" icon="vaadin-icons:gamepad"></iron-icon>
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
+              <iron-icon class="iron-icon" icon="vaadin-icons:gamepad"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-vrvideogame')}}
               <br>
@@ -177,7 +185,7 @@
           </paper-item>
           <paper-item>
             <div class="section">
-              <iron-icon class="ironIcon" icon="hardware:phonelink"></iron-icon>
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
               <br>
               {{t('pro-experience-header-projects-hecmocerpro')}}
               <br>
@@ -189,117 +197,117 @@
         </paper-menu>
       </pro-experience-submenu>
       <pro-experience-submenu header-text="🔨 {{t('pro-experience-header-technologies')}}">
-        <paper-menu class="menu-content menu techMenu" multi>
-          <paper-item style="display: inline; padding: 0">
-            <iron-icon class="ironIcon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
-            <iron-icon class="ironIcon" icon="icons:chevron-right"></iron-icon>
+        <paper-menu class="menu-content menu tech-menu" multi>
+          <paper-item class="paper-item paper-item-animated">
+            <iron-icon class="iron-icon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="iron-icon" icon="icons:chevron-right"></iron-icon>
           </paper-item>
           <span class="section">
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Java
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               C
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               C++
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               C#
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Python
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Matlab
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               LaTeX
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Maple
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               BASH
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Haskell
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Assembler
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Pascal
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Processing
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Blender
             </paper-item>
           </span>
         </paper-menu>
-        <paper-menu class="menu-content menu techMenu" multi>
-          <paper-item style="display: inline; padding: 0">
-            <iron-icon class="ironIcon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
-            <iron-icon class="ironIcon" icon="icons:chevron-right"></iron-icon>
+        <paper-menu class="menu-content menu tech-menu" multi>
+          <paper-item class="paper-item paper-item-animated">
+            <iron-icon class="iron-icon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="iron-icon" icon="icons:chevron-right"></iron-icon>
           </paper-item>
           <span class="section">
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               HTML5
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               CSS3
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               JavaScript
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Polymer
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Angular
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               GIT
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Github
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               GitLab
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Bower
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               SourceTree
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Grunt
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               LESS
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               SASS
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Bootstrap
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               NodeJS
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               MySQL
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               MongoDB
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Postman
             </paper-item>
-            <paper-item style="display: inline">
+            <paper-item class="paper-item-tech">
               Jenkins
             </paper-item>
           </span>
