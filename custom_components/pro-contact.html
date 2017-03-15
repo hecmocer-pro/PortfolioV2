@@ -1,9 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel='import' href='./pro-i18n-behaviour.html'>
-<link rel='import' href='./pro-section-header.html'>
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/vaadin-icons/vaadin-icons.html">
 <link rel="import" href="../custom_components/pro-hoverable-item.html">
+<link rel='import' href='./pro-i18n-behaviour.html'>
+<link rel='import' href='./pro-section-header.html'>
 
 
 <dom-module id="pro-contact">
@@ -22,21 +22,10 @@
         text-align: center;
       }
 
-      .bigIcon {
-        --iron-icon-height: 32px;
-        --iron-icon-width: 32px;
-      }
-
-      .icon:hover{
-        transform: scaleX(-1);
-        transition: transform 250ms;
-      }
-
-      .item{
+      .item-container{
         margin-top: 20px;
       }
-
-      .item:first-child{
+      .item-container:first-child{
         margin-top: 0;
       }
     </style>
@@ -44,13 +33,13 @@
     <pro-section-header text="{{t('pro-contact-header')}}"></pro-section-header>
 
     <div class="container">
-      <div class="item">
+      <div class="item-container">
         <pro-hoverable-item icon="vaadin-icons:paperplane" text="hecmocer-pro@gmail.com" url="mailto:hecmocer-pro@gmail.com"></pro-hoverable-item>
       </div>
-      <div class="item">
+      <div class="item-container">
         <pro-hoverable-item icon="vaadin-icons:twitter" text="@hecmocerPro" url="https://twitter.com/HecmocerPro"></pro-hoverable-item>
       </div>
-      <div class="item">
+      <div class="item-container">
         <pro-hoverable-item icon="vaadin-icons:edit" text="Feedback" url="{{t('pro-contact-feedback')}}"></pro-hoverable-item>
       </div>
     </div>
