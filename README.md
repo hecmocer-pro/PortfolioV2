@@ -1,6 +1,6 @@
 # Hecmocer
 
-| Portfolio webpage made with love and built with Polymer 1.x | ![Polymer](https://raw.githubusercontent.com/hecmocer-pro/hecmocer-pro/master/images/favicon.ico) |
+| Portfolio webpage made with love and built with Polymer 1.x | ![Polymer](https://polymer.gallerycdn.vsassets.io/extensions/polymer/polymer-ide/0.4.3/1490052563126/Microsoft.VisualStudio.Services.Icons.Default) |
 |---|---|
 
 ## :memo: Changelog
