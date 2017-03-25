@@ -1,9 +1,9 @@
-# :yum: Hecmocer
+# Hecmocer
 
 | Portfolio webpage made with love and built with Polymer 1.x | ![Polymer](https://raw.githubusercontent.com/hecmocer-pro/hecmocer-pro/master/images/favicon.ico) |
 |---|---|
 
-# :memo: Changelog
+## :memo: Changelog
 ### 1.0.0
  - Initial release!
    - Welcome
@@ -13,7 +13,7 @@
    - Contact
    - Footer
 
-# :rocket: Features
+## :rocket: Features
 - [x] Hosted on Firebase
 - [x] Welcoming video
 - [x] i18n (ES/EN)
@@ -27,7 +27,7 @@
 - [ ] "About me" video
 - [ ] Add analytics
 
-# :package: Custom components
+## :package: Custom components
 - `Pro-section-header` - Component for the header of each section
 - `Pro-i18n-behaviour` - Behaviour for adding and translating locales
 - `Pro-language-switcher` - Dropdown for selecting any of the available translations
@@ -35,7 +35,7 @@
 - `Pro-hoverable-item` - Component made up of a link and an icon which mirrors on hover
 - `Pro-place` - Component used for a place. Contains the image, the information and a paper-dialog
 
-# :computer: Run on localhost
+## :computer: Run on localhost
 
 ### Prerequisites
 
