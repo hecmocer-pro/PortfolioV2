@@ -1,0 +1,104 @@
+<link rel='import' href='./pro-i18n-behaviour.html'>
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+
+<dom-module id="pro-language-switcher">
+  <style>
+    :host {
+      display: inline;
+    }
+  </style>
+
+  <style is="custom-style">
+
+    paper-dropdown-menu {
+      --paper-input-container-label: {
+        font-style: italic;
+      };
+
+      --paper-input-container-input: {
+        color: #eeeeee;
+      }
+    }
+
+    .dropdown-menu{
+      width: 150px;
+    }
+
+  </style>
+
+  <template>
+    <paper-dropdown-menu label="{{t('pro-language-switcher-language')}}" vertical-align="bottom" horizontal-align="left" class="dropdown-menu">
+      <paper-listbox class="dropdown-content" selected="[[selectedLangIndex]]">
+        <paper-item>{{t('pro-language-switcher-es')}}</paper-item>
+        <paper-item>{{t('pro-language-switcher-en')}}</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+  </template>
+
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'pro-language-switcher',
+
+      behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+      properties: {
+        selectedLangIndex: Number
+      },
+
+      listeners: {
+        'selected-item-label-changed': '_langChanged'
+      },
+
+      created: function() {
+        this.appendLocale('es', 'pro-language-switcher-es', 'Castellano (ES)');
+        this.appendLocale('en', 'pro-language-switcher-es', 'Spanish (ES)');
+        this.appendLocale('es', 'pro-language-switcher-en', 'Inglés (EN)');
+        this.appendLocale('en', 'pro-language-switcher-en', 'English (EN)');
+
+        this.appendLocale('es', 'pro-language-switcher-language', 'Idioma');
+        this.appendLocale('en', 'pro-language-switcher-language', 'Language');
+      },
+
+      attached: function(){
+        switch(window.I18n.lang) {
+            case 'es':
+            this.selectedLangIndex = 0;
+                break;
+            case 'en':
+            this.selectedLangIndex = 1;
+                break;
+            default:;
+        }
+      },
+
+      _updateLangQueryStringParameter: function(value) {
+        window.I18n.lang = value;
+        window.location.href = window.location.updateQueryStringParameter(window.location.href, 'lang', value);
+      },
+
+      _langChange: function(language) {
+        if (language !== window.I18n.lang) {
+          this._updateLangQueryStringParameter(language);
+        }
+      },
+
+      _langChanged: function(newLangEvent){
+        var newLang = newLangEvent.detail.value;
+        var es = this.t('pro-language-switcher-es');
+        var en = this.t('pro-language-switcher-en');
+        if(newLang === es){
+          this._langChange('es');
+        }
+        if(newLang === en){
+          this._langChange('en');
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>

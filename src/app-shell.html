@@ -1,0 +1,63 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-grid/iron-grid.html">
+<link rel="import" href="../custom_components/pro-welcome.html">
+<link rel="import" href="../custom_components/pro-profile.html">
+<link rel="import" href="../custom_components/pro-experience.html">
+<link rel="import" href="../custom_components/pro-places.html">
+<link rel="import" href="../custom_components/pro-contact.html">
+<link rel="import" href="../custom_components/pro-footer.html">
+
+<dom-module id="app-shell">
+  <style>
+    .sections :first-child{
+      height: 100vh;
+    }
+    .sections :not(:first-child){
+      padding: 15vh 0;
+    }
+    .sections :nth-child(odd){
+      background-color: #dddddd;
+    }
+  </style>
+  <template>
+
+    <div class="sections">
+      <pro-welcome></pro-welcome>
+      <pro-profile></pro-profile>
+      <pro-experience></pro-experience>
+      <pro-places></pro-places>
+      <pro-contact></pro-contact>
+    </div>
+    <pro-footer></pro-footer>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'app-shell',
+
+      created: function() {
+        // http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript
+        window.location.getURLParameter = function(name) {
+          return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
+
+        //http://stackoverflow.com/questions/5999118/add-or-update-query-string-parameter
+        window.location.updateQueryStringParameter = function(uri, key, value) {
+          var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+          var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+          if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+          }
+          else {
+            return uri + separator + key + "=" + value;
+          }
+        }
+
+        window.I18n = {};
+        window.I18n.locales = {};
+        window.I18n.lang = window.location.getURLParameter('lang') || 'en';
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,403 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../custom_components/pro-experience-submenu.html">
+<link rel='import' href='./pro-section-header.html'>
+
+<dom-module id="pro-experience">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .paper-menu{
+        background-color: transparent;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      .menu{
+        background-color: transparent;
+      }
+
+      *:focus{
+        position: inherit !important;
+      }
+
+      .section{
+        border-left: solid black 1px;
+        padding: 10px 0 10px 20px;
+      }
+
+      .iron-icon{
+        margin-bottom: 3px;
+      }
+
+      .tech-menu{
+        height: 30px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+
+      .paper-item-animated{
+        display: inline !important;
+        padding: 0 !important;
+      }
+      .paper-item-tech{
+        display: inline !important;
+      }
+
+      .animatedChevron {
+        top: 3px;
+        transform: rotate(10deg);
+
+        animation-name: dragAnimation;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes dragAnimation {
+          0%   {left: 0px;}
+          30%  {left: 10px;}
+          100% {left: 0px;}
+      }
+    </style>
+
+    <pro-section-header text="{{t('pro-experience-header')}}"></pro-section-header>
+    <paper-menu multi class="paper-menu">
+      <pro-experience-submenu header-text="📚 {{t('pro-experience-header-education')}}">
+        <paper-menu class="menu-content menu" multi>
+          <paper-item>
+            <div class="section">
+              <b>UPM</b> - Universidad Politécnica de Madrid
+              <br>
+              {{t('pro-experience-header-education-degree')}}
+              <br>
+              2012 - 2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <b>RUC</b> - Roskilde University (Erasmus)
+              <br>
+              {{t('pro-experience-header-education-degree-erasmus')}}
+              <br>
+              {{t('pro-experience-header-education-degree-erasmus-season')}} 2015
+            </div>
+          </paper-item>
+        </paper-menu>
+      </pro-experience-submenu>
+      <pro-experience-submenu header-text="👨‍🏭 {{t('pro-experience-header-jobs')}}">
+        <paper-menu class="menu-content menu" multi>
+          <paper-item>
+            <div class="section">
+              <b>BABEL</b>
+              <br>
+              {{t('pro-experience-header-jobs-dev')}} (AngularJS)
+              <br>
+              02/2016 - 07/2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <b>BBVA - BABEL</b>
+              <br>
+              {{t('pro-experience-header-jobs-dev')}} (Polymer)
+              <br>
+              07/2016 - 02/2017
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <b>BBVA - BABEL</b>
+              <br>
+              {{t('pro-experience-header-jobs-dev')}} (Polymer 2.0)
+              <br>
+              02/2016 - {{t('pro-experience-header-jobs-currently')}}
+            </div>
+          </paper-item>
+        </paper-menu>
+      </pro-experience-submenu>
+      <pro-experience-submenu header-text="💡 {{t('pro-experience-header-projects')}}">
+        <paper-menu class="menu-content menu" multi>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="hardware:desktop-windows"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-checkers')}}
+              <br>
+              C++ ({{t('pro-experience-header-projects-checkers-type')}})
+              <br>
+              {{t('pro-experience-header-projects-checkers-season')}} 2015
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="hardware:desktop-windows"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-sova')}}
+              <br>
+              C# & Jquery
+              <br>
+              {{t('pro-experience-header-projects-sova-season')}} 2015
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-babelmusic')}}
+              <br>
+              HTML5, CSS3, JS
+              <br>
+              {{t('pro-experience-header-projects-babelmusic-season')}} 2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="vaadin-icons:server"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-webbackend')}}
+              <br>
+              NodeJS & MongoDB
+              <br>
+              {{t('pro-experience-header-projects-webbackend-season')}} 2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
+              <iron-icon class="iron-icon" icon="vaadin-icons:gamepad"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-vrvideogame')}}
+              <br>
+              A-Frame
+              <br>
+              {{t('pro-experience-header-projects-vrvideogame-season')}} 2016
+            </div>
+          </paper-item>
+          <paper-item>
+            <div class="section">
+              <iron-icon class="iron-icon" icon="hardware:phonelink"></iron-icon>
+              <br>
+              {{t('pro-experience-header-projects-hecmocerpro')}}
+              <br>
+              {{t('pro-experience-header-projects-hecmocerpro-technologies')}} & Polymer
+              <br>
+              {{t('pro-experience-header-projects-hecmocerpro-season')}} 2017
+            </div>
+          </paper-item>
+        </paper-menu>
+      </pro-experience-submenu>
+      <pro-experience-submenu header-text="🔨 {{t('pro-experience-header-technologies')}}">
+        <paper-menu class="menu-content menu tech-menu" multi>
+          <paper-item class="paper-item paper-item-animated">
+            <iron-icon class="iron-icon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="iron-icon" icon="icons:chevron-right"></iron-icon>
+          </paper-item>
+          <span class="section">
+            <paper-item class="paper-item-tech">
+              Java
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              C
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              C++
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              C#
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Python
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Matlab
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              LaTeX
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Maple
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              BASH
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Haskell
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Assembler
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Pascal
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Processing
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Blender
+            </paper-item>
+          </span>
+        </paper-menu>
+        <paper-menu class="menu-content menu tech-menu" multi>
+          <paper-item class="paper-item paper-item-animated">
+            <iron-icon class="iron-icon animatedChevron" icon="vaadin-icons:touch"></iron-icon>
+            <iron-icon class="iron-icon" icon="icons:chevron-right"></iron-icon>
+          </paper-item>
+          <span class="section">
+            <paper-item class="paper-item-tech">
+              HTML5
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              CSS3
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              JavaScript
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Polymer
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Angular
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              GIT
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Github
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              GitLab
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Bower
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              SourceTree
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Grunt
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              LESS
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              SASS
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Bootstrap
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              NodeJS
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              MySQL
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              MongoDB
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Postman
+            </paper-item>
+            <paper-item class="paper-item-tech">
+              Jenkins
+            </paper-item>
+          </span>
+        </paper-menu>
+      </pro-experience-submenu>
+    </paper-menu>
+
+  </template>
+  <script>
+   (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-experience',
+
+        behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+        created: function() {
+          this.appendLocale('es', 'pro-experience-header', 'Experiencia');
+          this.appendLocale('en', 'pro-experience-header', 'Experience');
+
+          this.appendLocale('es', 'pro-experience-header-education', 'Estudios');
+          this.appendLocale('en', 'pro-experience-header-education', 'Education');
+
+          this.appendLocale('es', 'pro-experience-header-jobs', 'Trabajos');
+          this.appendLocale('en', 'pro-experience-header-jobs', 'Jobs');
+
+          this.appendLocale('es', 'pro-experience-header-projects', 'Proyectos');
+          this.appendLocale('en', 'pro-experience-header-projects', 'Projects');
+
+          this.appendLocale('es', 'pro-experience-header-technologies', 'Tecnologías');
+          this.appendLocale('en', 'pro-experience-header-technologies', 'Technologies');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree', 'Matemáticas e Informática');
+          this.appendLocale('en', 'pro-experience-header-education-degree', 'Mathematics and Computer Science');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree-erasmus', 'Asignaturas de Máster Informática');
+          this.appendLocale('en', 'pro-experience-header-education-degree-erasmus', 'Computer Science Master Subjects');
+
+          this.appendLocale('es', 'pro-experience-header-education-degree-erasmus-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-education-degree-erasmus-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-jobs-dev', 'Desarrollador Web');
+          this.appendLocale('en', 'pro-experience-header-jobs-dev', 'Web Developer');
+
+          this.appendLocale('es', 'pro-experience-header-jobs-currently', 'Actualmente');
+          this.appendLocale('en', 'pro-experience-header-jobs-currently', 'Currently');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers', 'Inteligencia Artificial - juego de Las Damas');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers', 'Checkers Artificial Inteligence');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers-type', 'aplicación de consola');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers-type', 'console application');
+
+          this.appendLocale('es', 'pro-experience-header-projects-checkers-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-projects-checkers-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-projects-sova', 'Clon Full-stack de StackOverflow');
+          this.appendLocale('en', 'pro-experience-header-projects-sova', 'Full-stack StackOverflow clone');
+
+          this.appendLocale('es', 'pro-experience-header-projects-sova-season', 'Otoño');
+          this.appendLocale('en', 'pro-experience-header-projects-sova-season', 'Autumn');
+
+          this.appendLocale('es', 'pro-experience-header-projects-babelmusic', 'Reproductor de música online');
+          this.appendLocale('en', 'pro-experience-header-projects-babelmusic', 'Online music player');
+
+          this.appendLocale('es', 'pro-experience-header-projects-babelmusic-season', 'Principios');
+          this.appendLocale('en', 'pro-experience-header-projects-babelmusic-season', 'Early');
+
+          this.appendLocale('es', 'pro-experience-header-projects-webbackend', 'Backend web');
+          this.appendLocale('en', 'pro-experience-header-projects-webbackend', 'Web backend');
+
+          this.appendLocale('es', 'pro-experience-header-projects-webbackend-season', 'Principios');
+          this.appendLocale('en', 'pro-experience-header-projects-webbackend-season', 'Early');
+
+          this.appendLocale('es', 'pro-experience-header-projects-vrvideogame', 'Videojuego VR');
+          this.appendLocale('en', 'pro-experience-header-projects-vrvideogame', 'VR videogame');
+
+          this.appendLocale('es', 'pro-experience-header-projects-vrvideogame-season', 'Finales');
+          this.appendLocale('en', 'pro-experience-header-projects-vrvideogame-season', 'Late');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro', 'Portfolio web');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro', 'Personal website');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro-technologies', 'Componentes web');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro-technologies', 'Web Components');
+
+          this.appendLocale('es', 'pro-experience-header-projects-hecmocerpro-season', 'Principios');
+          this.appendLocale('en', 'pro-experience-header-projects-hecmocerpro-season', 'Early');
+        },
+      });
+    })();
+  </script>
+</dom-module>

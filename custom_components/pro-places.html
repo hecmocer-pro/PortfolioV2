@@ -1,0 +1,163 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-grid/iron-grid.html">
+<link rel='import' href='./pro-section-header.html'>
+<link rel='import' href='./pro-place.html'>
+
+<dom-module id="pro-places">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .container{
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+      }
+    </style>
+
+    <pro-section-header text="{{t('pro-places-header')}}"></pro-section-header>
+
+    <iron-grid current-screenformat="{{screenSize}}" class="container">
+
+        <pro-place
+          image-url="../images/Rome.jpg"
+          image-info="{{t('pro-places-rome')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Germany.jpg"
+          image-info="{{t('pro-places-germany')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Manzanares.jpg"
+          image-info="{{t('pro-places-manzanares')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Paris.jpg"
+          image-info="{{t('pro-places-paris')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Brussels.jpg"
+          image-info="{{t('pro-places-brussels')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Hillerod.jpg"
+          image-info="{{t('pro-places-hillerod')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Helsinki.jpg"
+          image-info="{{t('pro-places-helsinki')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Stockholm.jpg"
+          image-info="{{t('pro-places-malmo')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Odense.jpg"
+          image-info="{{t('pro-places-odense')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/RUC.jpg"
+          image-info="{{t('pro-places-ruc')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/London.jpg"
+          image-info="{{t('pro-places-london')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+        <pro-place
+          image-url="../images/Extremadura.jpg"
+          image-info="{{t('pro-places-extremadura')}}"
+          text="{{t('pro-places-textn')}}"
+          class="xs12 s6 m4 l3">
+        </pro-place>
+
+    </iron-grid>
+
+  </template>
+  <script>
+   (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-places',
+
+        behaviors: [window.MyBehaviours.proI18nBehaviour],
+
+        created: function() {
+          this.appendLocale('es', 'pro-places-header', 'Viajes');
+          this.appendLocale('en', 'pro-places-header', 'Places');
+
+          this.appendLocale('en', 'pro-places-rome', 'Rome, Italy');
+          this.appendLocale('es', 'pro-places-rome', 'Roma, Italia');
+
+          this.appendLocale('en', 'pro-places-germany', 'Neuschwanstein, Germany');
+          this.appendLocale('es', 'pro-places-germany', 'Neuschwanstein, Alemania');
+
+          this.appendLocale('en', 'pro-places-manzanares', 'Manzanares el Real, Spain');
+          this.appendLocale('es', 'pro-places-manzanares', 'Manzanares el Real, España');
+
+          this.appendLocale('en', 'pro-places-paris', 'Paris, France');
+          this.appendLocale('es', 'pro-places-paris', 'París, Francia');
+
+          this.appendLocale('en', 'pro-places-brussels', 'Brussels, Belgium');
+          this.appendLocale('es', 'pro-places-brussels', 'Bruselas, Bélgica');
+
+          this.appendLocale('en', 'pro-places-hillerod', 'Hillerod, Denmark');
+          this.appendLocale('es', 'pro-places-hillerod', 'Hillerod, Dinamarca');
+
+          this.appendLocale('en', 'pro-places-helsinki', 'Helsinki, Finland');
+          this.appendLocale('es', 'pro-places-helsinki', 'Helsinki, Finlandia');
+
+          this.appendLocale('en', 'pro-places-malmo', 'Stockholm, Sweden');
+          this.appendLocale('es', 'pro-places-malmo', 'Estocolmo, Suecia');
+
+          this.appendLocale('en', 'pro-places-odense', 'Odense, Denmark');
+          this.appendLocale('es', 'pro-places-odense', 'Odense, Dinamarca');
+
+          this.appendLocale('en', 'pro-places-ruc', 'RUC, Denmark');
+          this.appendLocale('es', 'pro-places-ruc', 'RUC, Dinamarca');
+
+          this.appendLocale('en', 'pro-places-london', 'London, Great Britain');
+          this.appendLocale('es', 'pro-places-london', 'Londres, Gran Bretaña');
+
+          this.appendLocale('en', 'pro-places-extremadura', 'Extremadura, Spain');
+          this.appendLocale('es', 'pro-places-extremadura', 'Extremadura, España');
+        }
+      });
+    })();
+  </script>
+</dom-module>

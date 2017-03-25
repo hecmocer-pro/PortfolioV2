@@ -1,0 +1,44 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="pro-section-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .text {
+        font-size: 54px;
+        text-align: center;
+        margin: 0;
+      }
+
+      .division {
+        opacity: 0.8;
+        width: 60%;
+      }
+    </style>
+
+    <h2 class="text">
+      {{text}}
+    </h2>
+    <hr class="division">
+
+  </template>
+  <script>
+   (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pro-section-header',
+
+        properties: {
+          text: {
+            type: String
+          }
+        }
+      });
+    })();
+  </script>
+</dom-module>
