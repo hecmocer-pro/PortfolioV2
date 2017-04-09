@@ -10,6 +10,7 @@
    - Ordered jobs & experience in reverse chronological order
    - Justified profile text
    - Fixed bower dependencies
+   - Fixed some other typos
 
 ### 1.0.0
  - Initial release!
