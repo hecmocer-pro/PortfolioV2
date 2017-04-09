@@ -4,6 +4,13 @@
 |---|---|
 
 ## :memo: Changelog
+### 1.0.1
+ - First fixes after testing
+   - Removed service worker
+   - Ordered jobs & experience in reverse chronological order
+   - Justified profile text
+   - Fixed bower dependencies
+
 ### 1.0.0
  - Initial release!
    - Welcome
@@ -25,7 +32,7 @@
 - [ ] Migrate to Polymer2.0-rc
 - [ ] Optimize first paint (lazy load)
 - [ ] "About me" video
-- [ ] Add analytics
+- [ ] Web analytics
 
 ## :package: Custom components
 - `Pro-section-header` - Component for the header of each section
