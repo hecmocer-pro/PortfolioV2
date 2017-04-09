@@ -6,17 +6,17 @@
   ],
   "private": true,
   "dependencies": {
-    "iron-grid": "https://github.com/The5heepDev/iron-grid.git",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.2.0",
-    "iron-media-query": "PolymerElements/iron-media-query#^1.0.0",
-    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
-    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^1.5.0",
-    "paper-item": "PolymerElements/paper-item#^1.2.1",
-    "paper-listbox": "PolymerElements/paper-listbox#^1.1.2",
-    "paper-menu": "PolymerElements/paper-menu#^1.2.2",
-    "paper-spinner": "PolymerElements/paper-spinner#^1.2.1",
-    "polymer": "Polymer/polymer#^1.6.0",
-    "vaadin-icons": "^2.0.0"
+    "iron-grid": "https://github.com/The5heepDev/iron-grid.git#26f8d5bd66cae4c01b46cedc63d0177e725a05f2",
+    "iron-icon": "PolymerElements/iron-icon#1.0.12",
+    "iron-icons": "PolymerElements/iron-icons#1.2.0",
+    "iron-media-query": "PolymerElements/iron-media-query#1.0.8",
+    "paper-dialog": "PolymerElements/paper-dialog#1.1.0",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#1.5.0",
+    "paper-item": "PolymerElements/paper-item#1.2.1",
+    "paper-listbox": "PolymerElements/paper-listbox#1.1.2",
+    "paper-menu": "PolymerElements/paper-menu#1.2.2",
+    "paper-spinner": "PolymerElements/paper-spinner#1.2.1",
+    "polymer": "Polymer/polymer#1.8.1",
+    "vaadin-icons": "2.0.0"
   }
 }
