@@ -1,6 +1,6 @@
 # Hecmocer
 
-The second version of my personal portfolio, built with Polymer 1.x in 2017.
+[2018] The second version of my personal portfolio, built with Polymer 1.x in 2017.
 
 | Portfolio webpage made with love and built with Polymer 1.x | ![Polymer](https://polymer.gallerycdn.vsassets.io/extensions/polymer/polymer-ide/0.4.3/1490052563126/Microsoft.VisualStudio.Services.Icons.Default) |
 |---|---|
